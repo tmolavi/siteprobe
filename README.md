@@ -16,10 +16,10 @@
 
 [Quick Start](#-60-second-quick-start) &bull;
 [Workflow](#-audit--fix--verify-workflow) &bull;
-[Agent Skill](#-agent-skill-installation) &bull;
+[Agent Skill](#-agent-skill-installation--exact-instructions) &bull;
 [MCP Server](#-model-context-protocol-mcp) &bull;
-[Architecture](#-architecture) &bull;
-[Documentation](https://github.com/tmolavi/siteprobe/tree/main/docs)
+[Honesty & Status Table](#-feature-status--honesty-table) &bull;
+[Architecture](#-architecture)
 
 </div>
 
@@ -49,25 +49,37 @@ Most auditing tools are passive checklists. They hand you a 40-page PDF of probl
 It doesn't just find a missing canonical tag, an unlabelled accessibility input, or an absent `/llms.txt` file for AI agents—it constructs an atomic, risk-categorized remediation plan, modifies local source code safely, and runs post-change verification to prove the problem is resolved.
 
 ### Core Guarantees:
-* **Zero Hallucination**: No simulated rankings or fabricated Search Console numbers. If an external credential is missing, SiteProbe clearly marks it as optional and explains how to connect it.
-* **Deterministic Scoring**: Transparent, explainable weights across Technical, On-Page, Schema, GEO, Accessibility, and Security.
-* **Safety First**: Every automated fix creates a snapshot before applying changes and rolls back automatically if verification fails.
+* **Zero Hallucination**: No simulated rankings or fabricated Search Console numbers. If an external credential is missing, SiteProbe clearly marks it as optional/unavailable and explains how to connect it.
+* **Deterministic Quality Scoring**: Transparent, explainable weights across Technical, On-Page, Schema, GEO, Accessibility, and Security.
+* **Realistic GEO Metrics**: The GEO score is strictly a technical readiness index evaluating observable signals (AI crawler permissions in robots.txt, `/llms.txt` presence, structured entities, and question-answer semantics). It is **not** a guarantee or predictor of AI citations or rankings.
+* **Safety First**: Every automated fix creates an in-memory file snapshot before applying changes and rolls back automatically if verification fails.
 * **Multilingual from Day 1**: Native localized audits in English (`en`), Persian (`fa`), and Turkish (`tr`).
 
 ---
 
-## 🚀 Capabilities
+## 📋 Feature Status & Honesty Table
 
-| Capability Category | What SiteProbe Audits | Safe Auto-Fix Capability |
-| :--- | :--- | :---: |
-| **Technical SEO** | Status codes (4xx/5xx), broken internal links, redirect chains & loops, canonical mismatches, robots.txt, XML sitemap validation, HTTPS & trailing slash consistency. | ✅ |
-| **On-Page SEO** | Title tags (length & duplicate detection), meta descriptions, H1 hierarchy & duplicates, image alt attributes, hreflang reciprocal links, thin content. | ✅ |
-| **GEO / AEO (AI-Search)** | AI search crawler access (`OAI-SearchBot`, `PerplexityBot`, `ClaudeBot`), `/llms.txt` validation, conversational QA structures, entity clarity & authorship. | ✅ |
-| **Structured Data** | JSON-LD syntax verification, Organization, WebSite, Breadcrumbs, Article, and FAQPage schema presence. | ✅ |
-| **Accessibility (WCAG 2.1)**| Missing `lang` on `<html>`, unlabelled form inputs, empty buttons without accessible text, landmark coverage. | ✅ |
-| **Security & Headers** | HTTPS enforcement, HSTS (`Strict-Transport-Security`), CSP, and `X-Content-Type-Options`. | 🛠️ Server Config |
-| **Performance Heuristics**| Server TTFB latency, oversized HTML document payloads, external script bloat, optional Google Lighthouse integration. | 🛠️ Advisory |
-| **Mobile UX** | Meta viewport presence and responsive `width=device-width` parameters. | ✅ |
+| Component / Feature | Implementation Status | Test Coverage | Description |
+| :--- | :---: | :---: | :--- |
+| **AsyncIO Crawler** | **WORKING** | Verified (Unit & Live) | Polite queue, adaptive backoff, SQLite storage, robots & sitemap parsing. |
+| **Technical SEO Checks** | **WORKING** | Verified (Unit & Live) | HTTP status codes, broken links, redirect chains, canonicals, robots/sitemap. |
+| **On-Page SEO Checks** | **WORKING** | Verified (Unit & Live) | Title/description lengths, duplicates, H1 hierarchy, alt tags, hreflangs. |
+| **Schema.org Validator** | **WORKING** | Verified (Unit & Live) | JSON-LD syntax errors, Organization, Article, Breadcrumb, and FAQ schemas. |
+| **GEO / AEO Readiness** | **WORKING** | Verified (Unit & Live) | Bot directives (OAI-SearchBot, PerplexityBot, ClaudeBot), `/llms.txt`, QA markup. |
+| **Deterministic Scoring** | **WORKING** | Verified (Unit & Live) | 100% transparent formula with itemized deductions and pillar breakdowns. |
+| **Safe Autofix Engine** | **WORKING** | Verified (Unit & Live) | Local file modifier for meta tags, canonicals, alt attributes, robots.txt, llms.txt. |
+| **Verification Engine** | **WORKING** | Verified (Unit & Live) | Re-evaluates before/after states; assigns FIXED, IMPROVED, UNCHANGED, SKIPPED. |
+| **Multi-format Reporting** | **WORKING** | Verified (Unit & Live) | Single-file zero-CDN HTML dashboard, structured JSON (`audit.json`), Markdown. |
+| **Multilingual (i18n)** | **WORKING** | Verified (Unit & Live) | Native translations for English (`en`), Persian (`fa`), and Turkish (`tr`). |
+| **MCP Server** | **WORKING** | Verified (Unit & Live) | FastMCP server exposing 14 tools (`start_audit`, `get_findings`, `apply_safe_fixes`). |
+| **Lighthouse CLI** | **OPTIONAL** | Tested | Lab Core Web Vitals runner via local Node.js / `lighthouse` or `npx`. |
+| **Playwright Automation** | **OPTIONAL** | Tested | Headless browser for SPA rendering (requires `pip install siteprobe[browser]`). |
+| **Google Search Console** | **OPTIONAL** | Scaffolded | Adapter ready; requires `GOOGLE_APPLICATION_CREDENTIALS` (never simulated). |
+| **Google Analytics 4** | **OPTIONAL** | Scaffolded | Adapter ready; requires `GA4_PROPERTY_ID` (never simulated). |
+| **DataForSEO API** | **OPTIONAL** | Scaffolded | Adapter ready; requires `DATAFORSEO_LOGIN` and `DATAFORSEO_PASSWORD`. |
+| **AI LLM Reasoning** | **OPTIONAL** | Scaffolded | LiteLLM wrapper for deeper semantics (requires OpenAI/Anthropic/Gemini keys). |
+| **SSH Server Fixer** | **ROADMAP** | Planned | Direct atomic remote patching over SSH key authentication. |
+| **WordPress / CMS Plugins**| **ROADMAP** | Planned | Native CMS plugins for direct headless database and API remediation. |
 
 ---
 
@@ -105,7 +117,7 @@ SiteProbe generates a single-file, interactive HTML report with zero external CD
 
 ## 📦 Installation
 
-### From Source (Recommended for Developers)
+### From Source (Clean Environment)
 
 ```bash
 git clone https://github.com/tmolavi/siteprobe.git
@@ -163,7 +175,7 @@ async def main():
     result = await engine.run_audit("https://example.com")
     
     print(f"Overall Quality Score: {result.scores.overall_score}/100")
-    print(f"GEO Score: {result.scores.geo_score}/100")
+    print(f"GEO Readiness Score: {result.scores.geo_score}/100")
     print(f"Discovered {len(result.findings)} findings across {result.crawl_summary.total_crawled} pages.")
 
 if __name__ == "__main__":
@@ -213,33 +225,52 @@ siteprobe integrations
 
 ---
 
-## 🤖 Agent Skill Installation
+## 🤖 Agent Skill Installation & Exact Instructions
 
-SiteProbe includes a first-class Agent Skill adhering to standard agentic specifications:
+SiteProbe provides a canonical Agent Skill at:
+[`skills/siteprobe/SKILL.md`](https://github.com/tmolavi/siteprobe/blob/main/skills/siteprobe/SKILL.md)
 
-`skills/siteprobe/SKILL.md`
-
-### Using with OpenAI Codex / CLI
-Codex automatically detects repository instructions from `skills/siteprobe/SKILL.md` and `AGENTS.md`.
-
-### Using with Claude Code
-Invoke Claude Code and reference the skill:
+### 1. Claude Code
+To equip Claude Code with SiteProbe, point to the skill folder or copy it into your local skill directory:
 ```bash
-claude "Audit https://example.com and fix all safe issues in this repository"
+# Copy to local skills directory
+mkdir -p ~/.claude/skills
+cp -r skills/siteprobe ~/.claude/skills/
 ```
-Claude will follow the phased intake, audit, plan, fix, verify, and report lifecycle defined in `CLAUDE.md` and `skills/siteprobe/SKILL.md`.
+**Tested Invocation**:
+```bash
+claude "Read skills/siteprobe/SKILL.md and audit https://example.com, then fix safe issues in this project."
+```
 
-### Using with Google Gemini / Antigravity
-The skill is located at `skills/siteprobe/SKILL.md`. Gemini and Antigravity agents can invoke the CLI or MCP tools directly during coding workflows.
+### 2. OpenAI Codex / CLI Agents
+Codex reads repository guidelines from `AGENTS.md` in the project root:
+```bash
+codex "Audit https://example.com using the siteprobe CLI and verify all changes."
+```
 
-### Using with Cursor
-Point Cursor Rules or `@agent` to `skills/siteprobe/SKILL.md` to enable autonomous website auditing and file remediation.
+### 3. Google Gemini / Antigravity
+In Antigravity or Gemini CLI, link the skill location in your configuration:
+```json
+{
+  "skills": [
+    "/path/to/siteprobe/skills/siteprobe/SKILL.md"
+  ]
+}
+```
+**Tested Invocation**:
+> "Audit this website and fix all safe issues you can verify following the siteprobe skill workflow."
+
+### 4. Cursor
+In Cursor, reference the skill file in `.cursorrules` or mention the file directly in the chat prompt:
+```text
+@skills/siteprobe/SKILL.md Audit https://example.com and apply verified fixes.
+```
 
 ---
 
 ## 🔌 Model Context Protocol (MCP)
 
-SiteProbe exposes an asynchronous, non-blocking MCP server:
+Launch SiteProbe's MCP server over stdio:
 
 ```bash
 siteprobe serve-mcp
@@ -343,9 +374,9 @@ SiteProbe is engineered with defensive patterns:
 - [x] v0.1.0: Standalone interactive HTML reporting
 - [x] v0.1.0: Multilingual support (en, fa, tr)
 - [x] v0.1.0: FastMCP server & Agent Skill specification
-- [ ] v0.2.0: Deep JS rendering via Playwright cluster
-- [ ] v0.2.0: Automated GitHub Pull Request creator (`siteprobe pr`)
-- [ ] v0.3.0: WordPress & Shopify headless API remediation plugins
+- [ ] v0.2.0: Deep JS rendering via distributed Playwright cluster
+- [ ] v0.2.0: Automated GitHub Pull Request creation CLI command (`siteprobe pr`)
+- [ ] v0.3.0: Native headless CMS plugins for WordPress and Shopify API-based auto-remediation
 
 ---
 
