@@ -1,0 +1,25 @@
+name: Fixture Audit Smoke Test
+
+on: [push, pull_request]
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install SiteProbe
+        run: |
+          pip install -e .
+      - name: Test CLI Doctor & Integrations
+        run: |
+          siteprobe doctor
+          siteprobe integrations
+      - name: Test Public Audit Command
+        run: |
+          siteprobe audit https://example.com --max-pages 5 --output ./test-out
+          test -f ./test-out/audit.json
+          test -f ./test-out/audit.html
+          test -f ./test-out/audit.md

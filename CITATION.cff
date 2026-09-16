@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software in your research or workflows, please cite it as below."
+authors:
+  - family-names: "Molavi"
+    given-names: "Taqi"
+title: "SiteProbe: Open-source autonomous website auditor & fixer for SEO, GEO, performance, accessibility and technical web quality"
+version: 0.1.0
+date-released: 2026-09-16
+url: "https://github.com/tmolavi/siteprobe"

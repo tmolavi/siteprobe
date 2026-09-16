@@ -1,0 +1,28 @@
+site:
+  url: https://example.com
+  language: en
+
+crawl:
+  max_pages: 200
+  concurrency: 5
+  crawl_delay_ms: 100
+  respect_robots: true
+  timeout_seconds: 15.0
+
+checks:
+  technical: true
+  onpage: true
+  schema_org: true
+  geo: true
+  performance: true
+  accessibility: true
+  security: true
+  content: true
+  ux: true
+
+integrations:
+  search_console: false
+  ga4: false
+  dataforseo: false
+  lighthouse: false
+  playwright: false

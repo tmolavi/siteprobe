@@ -1,0 +1,28 @@
+name: 🐛 Bug Report
+description: File an issue to report a bug in SiteProbe
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to report a bug in SiteProbe!
+  - type: input
+    id: version
+    attributes:
+      label: SiteProbe Version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      placeholder: Describe the issue in detail
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. siteprobe audit https://example.com"
+    validations:
+      required: true

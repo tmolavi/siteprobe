@@ -1,0 +1,127 @@
+{
+  "categories": {
+    "technical_seo": "Teknik SEO",
+    "onpage_seo": "Sayfa İçi SEO",
+    "schema_org": "Yapılandırılmış Veri",
+    "geo_aeo": "GEO & Yapay Zeka Arama",
+    "performance": "Performans",
+    "accessibility": "Erişilebilirlik",
+    "security": "Güvenlik",
+    "content_quality": "İçerik Kalitesi",
+    "ux": "Kullanıcı Deneyimi"
+  },
+  "severities": {
+    "critical": "Kritik",
+    "high": "Yüksek",
+    "medium": "Orta",
+    "low": "Düşük",
+    "info": "Bilgilendirme"
+  },
+  "findings": {
+    "technical.status.http_4xx": {
+      "title": "İstemci hatası (HTTP 4xx)",
+      "why_it_matters": "Arama motoru tarayıcıları ve ziyaretçiler bozuk sayfalarla karşılaşarak tarama bütçesini tüketir.",
+      "recommended_action": "Bu sayfaya işaret eden iç bağlantıları düzeltin veya 301 yönlendirmesi ayarlayın."
+    },
+    "technical.status.http_5xx": {
+      "title": "Sunucu hatası (HTTP 5xx)",
+      "why_it_matters": "Sunucu hataları sayfaların dizine eklenmesini engeller ve sistem kararsızlığını gösterir.",
+      "recommended_action": "Sunucu günlüklerini inceleyerek arka uç çökmelerini giderin."
+    },
+    "technical.links.broken_internal": {
+      "title": "Bozuk iç bağlantı tespit edildi",
+      "why_it_matters": "Bozuk bağlantılar kullanıcıları engeller ve tarayıcıların sayfaları keşfetmesini zorlaştırır.",
+      "recommended_action": "href özelliğini geçerli bir URL ile güncelleyin veya bozuk bağlantıyı kaldırın."
+    },
+    "technical.canonical.missing": {
+      "title": "Kanonik (Canonical) URL etiketi eksik",
+      "why_it_matters": "Kanonik etiket olmadan yinelenen sayfalar dizine eklenebilir ve otorite bölünebilir.",
+      "recommended_action": "<head> bölümüne <link rel=\"canonical\" href=\"...\"> etiketi ekleyin."
+    },
+    "technical.canonical.mismatch": {
+      "title": "Kanonik URL farklı bir adrese işaret ediyor",
+      "why_it_matters": "İstenmeden yapıldıysa, mevcut sayfanın arama dizinlerinde yok sayılmasına neden olur.",
+      "recommended_action": "Kanonik URL'nin doğru yetkili sayfayı gösterdiğinden emin olun."
+    },
+    "technical.redirect.chain": {
+      "title": "Yönlendirme zinciri tespit edildi",
+      "why_it_matters": "Yönlendirme zincirleri gecikmeyi artırır ve tarama bütçesini boşa harcar.",
+      "recommended_action": "İç bağlantıları doğrudan nihai hedefe yönlendirin."
+    },
+    "technical.robots.missing": {
+      "title": "robots.txt dosyası bulunamadı",
+      "why_it_matters": "Eksik robots.txt tarayıcıların rehberini kaldırır ve gereksiz sayfaların taranmasına neden olabilir.",
+      "recommended_action": "Kök dizinde geçerli bir robots.txt oluşturun."
+    },
+    "technical.sitemap.missing": {
+      "title": "XML site haritası bulunamadı",
+      "why_it_matters": "XML site haritaları arama motorlarına dizine eklenebilir sayfaların tam listesini sunar.",
+      "recommended_action": "Bir XML site haritası oluşturun ve robots.txt içinde belirtin."
+    },
+    "technical.security.missing_hsts": {
+      "title": "Strict-Transport-Security (HSTS) başlığı eksik",
+      "why_it_matters": "HSTS güvenli HTTPS bağlantısını zorunlu kılarak kullanıcıları korur.",
+      "recommended_action": "Web sunucusunda HSTS başlığını etkinleştirin."
+    },
+    "onpage.title.missing": {
+      "title": "Eksik <title> etiketi",
+      "why_it_matters": "Başlık etiketi en önemli sıralama sinyallerinden biridir.",
+      "recommended_action": "30 ila 60 karakter arasında açıklayıcı bir başlık ekleyin."
+    },
+    "onpage.title.too_long": {
+      "title": "Başlık etiketi önerilen uzunluğu aşıyor",
+      "why_it_matters": "60 karakterden uzun başlıklar arama sonuçlarında kesilir.",
+      "recommended_action": "Başlığı 60 karakterin altına indirin."
+    },
+    "onpage.description.missing": {
+      "title": "Eksik meta açıklama (Meta Description)",
+      "why_it_matters": "Meta açıklama tıklama oranlarını (CTR) doğrudan etkiler.",
+      "recommended_action": "70 ila 160 karakter arasında çekici bir meta açıklama ekleyin."
+    },
+    "onpage.h1.missing": {
+      "title": "Eksik <h1> başlığı",
+      "why_it_matters": "H1 etiketi sayfanın ana konusunu netleştirir.",
+      "recommended_action": "Sayfaya tam olarak bir adet açıklayıcı <h1> başlığı ekleyin."
+    },
+    "onpage.h1.multiple": {
+      "title": "Birden fazla <h1> başlığı bulundu",
+      "why_it_matters": "Birden fazla H1 başlığı konu netliğini zayıflatabilir.",
+      "recommended_action": "Bir ana <h1> tutup diğerlerini <h2> olarak değiştirin."
+    },
+    "onpage.images.missing_alt": {
+      "title": "Görselde alt özniteliği eksik",
+      "why_it_matters": "Alt metin ekran okuyucular ve görsel aramaları için zorunludur.",
+      "recommended_action": "Görseli tanımlayan bir alt özniteliği ekleyin."
+    },
+    "geo.llms_txt.missing": {
+      "title": "Eksik /llms.txt dosyası",
+      "why_it_matters": "llms.txt yapay zeka tarayıcılarına optimize edilmiş markdown özeti sağlar.",
+      "recommended_action": "Standart bir /llms.txt dosyası oluşturun."
+    },
+    "geo.ai_bots.blocked": {
+      "title": "Yapay zeka arama tarayıcıları robots.txt dosyasında engellenmiş",
+      "why_it_matters": "Arama botlarını engellemek sitenizin yapay zeka cevaplarında kaynak gösterilmesini engeller.",
+      "recommended_action": "OAI-SearchBot veya PerplexityBot gibi arama botlarına izin verin."
+    },
+    "geo.entity.unstructured": {
+      "title": "Zayıf varlık netliği ve yapılandırılmış kimlik eksikliği",
+      "why_it_matters": "Yapay zeka modelleri yetkili kaynakları belirlemek için net varlık tanımlarına güvenir.",
+      "recommended_action": "Organization ve sameAs bağlantılarını içeren JSON-LD ekleyin."
+    },
+    "schema.jsonld.syntax_error": {
+      "title": "Geçersiz JSON-LD sözdizimi",
+      "why_it_matters": "Hatalı JSON-LD arama motorları tarafından okunamaz.",
+      "recommended_action": "Sözdizimi hatalarını giderin."
+    },
+    "accessibility.html.missing_lang": {
+      "title": "<html> etiketinde eksik lang özniteliği",
+      "why_it_matters": "Ekran okuyucuların doğru telaffuz yapabilmesi için dil özniteliği gerekir.",
+      "recommended_action": "<html lang=\"tr\"> şeklinde dil özniteliği ekleyin."
+    },
+    "accessibility.form.unlabeled_input": {
+      "title": "Form girişinde ilişkili etiket (label) eksik",
+      "why_it_matters": "Yardımcı teknolojiler etiketsiz alanların amacını belirleyemez.",
+      "recommended_action": "Giriş alanına <label for=\"...\"> veya aria-label ekleyin."
+    }
+  }
+}

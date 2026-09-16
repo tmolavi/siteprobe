@@ -1,0 +1,127 @@
+{
+  "categories": {
+    "technical_seo": "Technical SEO",
+    "onpage_seo": "On-Page SEO",
+    "schema_org": "Structured Data",
+    "geo_aeo": "GEO & AI Search",
+    "performance": "Performance",
+    "accessibility": "Accessibility",
+    "security": "Security",
+    "content_quality": "Content Quality",
+    "ux": "User Experience"
+  },
+  "severities": {
+    "critical": "Critical",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low",
+    "info": "Informational"
+  },
+  "findings": {
+    "technical.status.http_4xx": {
+      "title": "Client error (HTTP 4xx)",
+      "why_it_matters": "Search engine crawlers and visitors encounter broken pages, degrading user experience and wasting crawl budget.",
+      "recommended_action": "Fix internal broken links pointing to this page or restore the content. If permanently removed, configure a 301 redirect."
+    },
+    "technical.status.http_5xx": {
+      "title": "Server error (HTTP 5xx)",
+      "why_it_matters": "Server errors prevent indexing and represent immediate site instability.",
+      "recommended_action": "Investigate application/server logs to identify and resolve backend crashes."
+    },
+    "technical.links.broken_internal": {
+      "title": "Broken internal link detected",
+      "why_it_matters": "Broken internal links frustrate users and prevent search engine bots from discovering and indexing valuable pages.",
+      "recommended_action": "Update the href attribute to point to the valid active URL or remove the broken link."
+    },
+    "technical.canonical.missing": {
+      "title": "Missing canonical URL tag",
+      "why_it_matters": "Without a canonical tag, search engines may index duplicate or parameterized URL variants, diluting ranking signals.",
+      "recommended_action": "Add a <link rel=\"canonical\" href=\"...\"> tag to the <head> section referencing the authoritative URL."
+    },
+    "technical.canonical.mismatch": {
+      "title": "Canonical URL points to a different address",
+      "why_it_matters": "The declared canonical points away from this URL. If unintended, this causes the current page to be ignored by search indexes.",
+      "recommended_action": "Ensure the canonical URL accurately represents the intended authoritative version."
+    },
+    "technical.redirect.chain": {
+      "title": "Redirect chain detected",
+      "why_it_matters": "Redirect chains add round-trip latency and waste crawler budget.",
+      "recommended_action": "Update internal links to target the final destination directly."
+    },
+    "technical.robots.missing": {
+      "title": "robots.txt not found",
+      "why_it_matters": "A missing robots.txt leaves crawler behavior unguided and can cause unintended indexing of private resources.",
+      "recommended_action": "Create a robots.txt file at the root domain specifying crawl permissions and sitemap locations."
+    },
+    "technical.sitemap.missing": {
+      "title": "XML sitemap not detected",
+      "why_it_matters": "XML sitemaps provide search engines with an authoritative roadmap of all indexable pages.",
+      "recommended_action": "Generate an XML sitemap and declare its URL in robots.txt."
+    },
+    "technical.security.missing_hsts": {
+      "title": "Strict-Transport-Security (HSTS) header missing",
+      "why_it_matters": "HSTS enforces HTTPS connections, protecting users against SSL-stripping and man-in-the-middle attacks.",
+      "recommended_action": "Configure the web server to send 'Strict-Transport-Security: max-age=31536000; includeSubDomains'."
+    },
+    "onpage.title.missing": {
+      "title": "Missing <title> tag",
+      "why_it_matters": "Title tags are one of the strongest on-page ranking signals and define the snippet title in search results.",
+      "recommended_action": "Add a unique, descriptive <title> tag between 30 and 60 characters."
+    },
+    "onpage.title.too_long": {
+      "title": "Title tag exceeds recommended length",
+      "why_it_matters": "Titles longer than 60 characters are truncated in search engine result pages (SERPs).",
+      "recommended_action": "Shorten the title to under 60 characters while retaining primary keywords."
+    },
+    "onpage.description.missing": {
+      "title": "Missing meta description",
+      "why_it_matters": "Meta descriptions provide searchers with a clear summary and directly impact click-through rates.",
+      "recommended_action": "Add a compelling <meta name=\"description\" content=\"...\"> between 70 and 160 characters."
+    },
+    "onpage.h1.missing": {
+      "title": "Missing <h1> heading",
+      "why_it_matters": "H1 tags establish primary topic relevance for users and search algorithms.",
+      "recommended_action": "Include exactly one clear and descriptive <h1> heading on the page."
+    },
+    "onpage.h1.multiple": {
+      "title": "Multiple <h1> headings found",
+      "why_it_matters": "Multiple H1 tags can dilute topic clarity and confuse screen readers.",
+      "recommended_action": "Retain one primary <h1> and convert secondary headings to <h2>."
+    },
+    "onpage.images.missing_alt": {
+      "title": "Image missing alt attribute",
+      "why_it_matters": "Alt text is required for screen readers and assists search engines in image indexing.",
+      "recommended_action": "Add an alt attribute describing the image, or alt=\"\" if purely decorative."
+    },
+    "geo.llms_txt.missing": {
+      "title": "Missing /llms.txt file",
+      "why_it_matters": "/llms.txt provides LLM-based crawlers and AI search agents with structured, high-signal markdown summaries of your site.",
+      "recommended_action": "Create a standardized /llms.txt file outlining core entities, APIs, and key markdown resources."
+    },
+    "geo.ai_bots.blocked": {
+      "title": "AI search crawlers blocked in robots.txt",
+      "why_it_matters": "Blocking OAI-SearchBot or PerplexityBot prevents your site from appearing as an authoritative source in AI answers.",
+      "recommended_action": "Allow search/retrieval bots while disallowing generic training bots if desired."
+    },
+    "geo.entity.unstructured": {
+      "title": "Weak entity clarity and lack of structured identity",
+      "why_it_matters": "AI engines rely on clear entity attribution (Organization, Person, Product) to cite authoritative sources.",
+      "recommended_action": "Add structured JSON-LD with valid schema.org types, official names, and sameAs social links."
+    },
+    "schema.jsonld.syntax_error": {
+      "title": "Invalid JSON-LD syntax",
+      "why_it_matters": "Malformed JSON-LD cannot be parsed by search engines, nullifying rich snippet opportunities.",
+      "recommended_action": "Correct JSON syntax errors such as trailing commas or unescaped characters."
+    },
+    "accessibility.html.missing_lang": {
+      "title": "Missing or empty lang attribute on <html> element",
+      "why_it_matters": "Screen readers depend on the lang attribute to pronounce text correctly.",
+      "recommended_action": "Add a valid ISO language code to the <html> tag, e.g. <html lang=\"en\">."
+    },
+    "accessibility.form.unlabeled_input": {
+      "title": "Form input missing associated label",
+      "why_it_matters": "Users with assistive technologies cannot determine the purpose of unlabeled form fields.",
+      "recommended_action": "Associate an explicit <label for=\"...\"> with the input element or provide aria-label."
+    }
+  }
+}

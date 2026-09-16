@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  siteprobe:
+    build: .
+    volumes:
+      - ./reports:/app/reports
+    command: ["audit", "https://example.com", "--output", "/app/reports"]
