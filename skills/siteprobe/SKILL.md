@@ -14,6 +14,9 @@ triggers:
   - "AI visibility audit"
   - "fix SEO issues"
   - "inspect my site"
+  - "check SSR"
+  - "audit client-side rendering"
+  - "SSR vs CSR check"
   - "improve Core Web Vitals"
   - "check accessibility"
   - "fix indexing"
@@ -149,6 +152,9 @@ Conclude with a clear summary:
 ```bash
 # Public website audit
 siteprobe audit https://example.com
+
+# Inspect SSR / CSR hydration & raw SEO tags
+siteprobe ssr https://example.com
 
 # Persian or Turkish language audit
 siteprobe audit https://example.com --lang fa

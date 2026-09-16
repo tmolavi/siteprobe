@@ -1,6 +1,8 @@
 import asyncio
 import uuid
 from typing import Any, Dict, List, Optional
+import httpx
+
 try:
     from mcp.server.fastmcp import FastMCP
 except (ImportError, ModuleNotFoundError):
@@ -9,6 +11,7 @@ except (ImportError, ModuleNotFoundError):
     except Exception:
         FastMCP = None
 
+from siteprobe.checks.technical.ssr import analyze_ssr
 from siteprobe.core.config import SiteProbeConfig
 from siteprobe.core.engine import AuditEngine, AuditResult
 from siteprobe.models.config import CrawlConfig, SiteConfig
@@ -70,6 +73,33 @@ def get_audit_status(job_id: str) -> Dict[str, Any]:
         "error": job["error"],
         "has_result": job["result"] is not None,
     }
+
+
+@mcp.tool()
+async def check_ssr(url: str) -> Dict[str, Any]:
+    """Inspect a URL to check whether it uses Server-Side Rendering (SSR) vs Client-Side (CSR/SPA)."""
+    try:
+        async with httpx.AsyncClient(
+            headers={"User-Agent": "SiteProbe/0.1.0 MCP-SSR"},
+            follow_redirects=True,
+            timeout=15.0
+        ) as client:
+            resp = await client.get(url)
+            analysis = analyze_ssr(resp.text)
+            return {
+                "url": url,
+                "status_code": resp.status_code,
+                "rendering_mode": analysis.rendering_mode,
+                "framework": analysis.framework,
+                "has_hydration_payload": analysis.has_hydration_payload,
+                "hydration_payload_size_bytes": analysis.hydration_payload_size_bytes,
+                "raw_word_count": analysis.raw_word_count,
+                "has_empty_root_container": analysis.has_empty_root_container,
+                "raw_seo_tags": analysis.raw_seo_tags,
+                "diagnostic_signals": analysis.details,
+            }
+    except Exception as e:
+        return {"error": str(e), "url": url}
 
 
 @mcp.tool()
@@ -204,6 +234,8 @@ def generate_report(job_id: str, format: str = "markdown") -> str:
 
 def run_mcp():
     """Run FastMCP server over standard stdio."""
+    if mcp is None:
+        raise RuntimeError("MCP library not available.")
     mcp.run(transport="stdio")
 
 

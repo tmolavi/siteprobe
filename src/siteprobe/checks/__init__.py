@@ -8,6 +8,7 @@ from siteprobe.checks.technical import (
     RobotsSitemapCheck,
     SecurityHeadersCheck,
     UrlStructureCheck,
+    SsrCheck,
 )
 from siteprobe.checks.onpage import (
     TitleCheck,
@@ -25,7 +26,7 @@ from siteprobe.checks.ux import ViewportCheck
 
 
 def register_default_checks(registry: CheckRegistry) -> None:
-    # Technical
+    # Technical & Rendering
     registry.register(HttpStatusCheck())
     registry.register(CanonicalCheck())
     registry.register(RedirectCheck())
@@ -33,6 +34,7 @@ def register_default_checks(registry: CheckRegistry) -> None:
     registry.register(RobotsSitemapCheck())
     registry.register(SecurityHeadersCheck())
     registry.register(UrlStructureCheck())
+    registry.register(SsrCheck())
 
     # On-Page
     registry.register(TitleCheck())

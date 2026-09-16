@@ -122,6 +122,16 @@
       "title": "Form input missing associated label",
       "why_it_matters": "Users with assistive technologies cannot determine the purpose of unlabeled form fields.",
       "recommended_action": "Associate an explicit <label for=\"...\"> with the input element or provide aria-label."
+    },
+    "technical.ssr.client_only_rendering": {
+      "title": "Client-Side Only Rendering (SPA) detected with empty initial HTML shell",
+      "why_it_matters": "Search engines and AI retrieval bots crawl raw HTML first. If main content is rendered solely in the client browser, search bots face rendering delays or may fail to index the page content entirely.",
+      "recommended_action": "Implement Server-Side Rendering (SSR) or Static Site Generation (SSG) using frameworks like Next.js, Nuxt, or Astro."
+    },
+    "technical.ssr.missing_raw_seo_tags": {
+      "title": "Critical SEO tag(s) missing from raw server HTML",
+      "why_it_matters": "Crawlers that do not execute JavaScript (or execute it with low render budgets) will not detect client-injected metadata like titles or descriptions.",
+      "recommended_action": "Ensure title, description, and canonical tags are rendered directly in the initial server HTML response."
     }
   }
 }

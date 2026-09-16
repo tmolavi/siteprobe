@@ -26,3 +26,5 @@
 | `accessibility.html.missing_lang`| Accessibility | High | Yes | Missing or empty `lang` attribute on `<html>` |
 | `accessibility.form.unlabeled_input`| Accessibility | High | Yes | Form input without label or aria-label |
 | `ux.viewport.missing` | Mobile UX | High | Yes | Missing `<meta name="viewport">` |
+| `technical.ssr.client_only_rendering` | Technical SEO | High | No | Client-side only SPA with empty raw HTML DOM shell |
+| `technical.ssr.missing_raw_seo_tags` | Technical SEO | High | Yes | Critical SEO tags missing from initial server HTML |

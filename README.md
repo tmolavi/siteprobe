@@ -63,6 +63,7 @@ It doesn't just find a missing canonical tag, an unlabelled accessibility input,
 | :--- | :---: | :---: | :--- |
 | **AsyncIO Crawler** | **WORKING** | Verified (Unit & Live) | Polite queue, adaptive backoff, SQLite storage, robots & sitemap parsing. |
 | **Technical SEO Checks** | **WORKING** | Verified (Unit & Live) | HTTP status codes, broken links, redirect chains, canonicals, robots/sitemap. |
+| **SSR & Hydration Audit** | **WORKING** | Verified (Unit & Live) | Framework signatures, client-only SPA empty shells, and raw server SEO tag parity. |
 | **On-Page SEO Checks** | **WORKING** | Verified (Unit & Live) | Title/description lengths, duplicates, H1 hierarchy, alt tags, hreflangs. |
 | **Schema.org Validator** | **WORKING** | Verified (Unit & Live) | JSON-LD syntax errors, Organization, Article, Breadcrumb, and FAQ schemas. |
 | **GEO / AEO Readiness** | **WORKING** | Verified (Unit & Live) | Bot directives (OAI-SearchBot, PerplexityBot, ClaudeBot), `/llms.txt`, QA markup. |
@@ -185,6 +186,12 @@ if __name__ == "__main__":
 ---
 
 ## 💻 CLI Usage
+
+### SSR & Rendering Inspection
+Inspect initial raw server HTML for SSR vs. client-only SPA rendering, framework hydration payloads (Next.js, Nuxt, Remix, Astro), and missing raw SEO tags:
+```bash
+siteprobe ssr https://example.com
+```
 
 ### Audit Command
 ```bash
@@ -397,6 +404,16 @@ For security vulnerability disclosures, please review [SECURITY.md](SECURITY.md)
 
 ---
 
+---
+
+## 💡 Related Projects & Inspiration
+
+SiteProbe's SSR and rendering analysis draws architectural inspiration from prominent technical web tooling:
+* **`is-ssr` & regex/ast hydration analyzers**: Inspecting hydration state payloads (`__NEXT_DATA__`, `__NUXT_DATA__`, `window.__remixContext`, `astro-island`).
+* **`puppeteer-ssr-checker` & Rendertron**: Comparing initial raw server markup against rendered client DOM.
+* **Model Context Protocol (`@modelcontextprotocol/server-puppeteer` & `server-fetch`)**: Standardizing browser inspection primitives and raw HTTP fetching for AI agents.
+
+---
 ## 📄 License
 
 SiteProbe is licensed under the [MIT License](LICENSE).

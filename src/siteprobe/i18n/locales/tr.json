@@ -122,6 +122,16 @@
       "title": "Form girişinde ilişkili etiket (label) eksik",
       "why_it_matters": "Yardımcı teknolojiler etiketsiz alanların amacını belirleyemez.",
       "recommended_action": "Giriş alanına <label for=\"...\"> veya aria-label ekleyin."
+    },
+    "technical.ssr.client_only_rendering": {
+      "title": "Boş ilk HTML kabuğu ile yalnızca İstemci Tarafı Oluşturma (SPA) tespit edildi",
+      "why_it_matters": "Arama motorları ve yapay zeka botları önce ham HTML verisini tarar. İçerik yalnızca tarayıcıda oluşturulursa dizine ekleme gecikebilir veya başarısız olabilir.",
+      "recommended_action": "Next.js, Nuxt veya Astro gibi çerçevelerle Sunucu Taraflı Oluşturma (SSR) veya Statik Üretim (SSG) uygulayın."
+    },
+    "technical.ssr.missing_raw_seo_tags": {
+      "title": "Kritik SEO etiketleri ham sunucu HTML çıktısında eksik",
+      "why_it_matters": "JavaScript çalıştırmayan veya sınırlı bütçesi olan botlar, istemci tarafından enjekte edilen başlık veya açıklamaları göremez.",
+      "recommended_action": "Başlık, açıklama ve kanonik etiketlerin doğrudan ilk sunucu yanıtında oluşturulduğundan emin olun."
     }
   }
 }

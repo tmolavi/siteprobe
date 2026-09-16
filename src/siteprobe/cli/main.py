@@ -5,6 +5,7 @@ from siteprobe.cli.fix import fix_command
 from siteprobe.cli.verify import verify_command
 from siteprobe.cli.doctor import run_doctor
 from siteprobe.cli.integrations import run_integrations
+from siteprobe.cli.ssr import ssr_command
 from siteprobe.mcp.server import run_mcp
 
 app = typer.Typer(
@@ -14,6 +15,7 @@ app = typer.Typer(
 )
 
 app.command(name="audit", help="Run comprehensive public website audit")(audit_command)
+app.command(name="ssr", help="Analyze raw server response for SSR, hydration payloads, and SPA shells")(ssr_command)
 app.command(name="fix", help="Execute safe, deterministic code remediations")(fix_command)
 app.command(name="verify", help="Verify applied fixes and re-evaluate findings")(verify_command)
 app.command(name="doctor", help="Inspect local environment capabilities and dependencies")(run_doctor)
