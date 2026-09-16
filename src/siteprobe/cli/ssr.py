@@ -18,7 +18,7 @@ def ssr_command(
 
     with console.status("[bold blue]Fetching initial raw server HTML...[/bold blue]", spinner="dots"):
         try:
-            headers = {"User-Agent": "SiteProbe/0.1.0 SSR-Inspector"}
+            headers = {"User-Agent": "SiteProbe/0.1.1 SSR-Inspector"}
             resp = httpx.get(url, headers=headers, follow_redirects=True, timeout=timeout)
             html = resp.text
             status_code = resp.status_code

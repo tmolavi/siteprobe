@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "siteprobe"
-version = "0.1.0"
+version = "0.1.1"
 description = "Open-source autonomous website auditor & fixer for SEO, GEO, performance, accessibility and technical web quality."
 readme = "README.md"
 requires-python = ">=3.11"

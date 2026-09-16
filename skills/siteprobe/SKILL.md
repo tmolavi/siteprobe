@@ -5,7 +5,7 @@ category: seo
 risk: low
 source: official
 author: Taqi Molavi
-version: "0.1.0"
+version: "0.1.1"
 triggers:
   - "audit my website"
   - "SEO audit"

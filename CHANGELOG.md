@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2026-09-16
+
+### Added
+- **SSR & Hydration Inspector**: Comprehensive Server-Side Rendering (SSR) vs. Client-Side Rendering (CSR/SPA) detection engine.
+- **Hydration Payloads & Framework Detection**: Detects Next.js (`__NEXT_DATA__`, `self.__next_f`), Nuxt (`__NUXT_DATA__`), Remix, SvelteKit, Astro islands, Gatsby, and Angular Universal.
+- **Raw Server HTML Parity**: Checks whether critical SEO tags (`<title>`, `<meta description>`, `<h1>`, `<link rel="canonical">`) exist directly in initial server response or require client JS execution.
+- **Empty Shell SPA Detection**: Identifies `<div id="root"></div>` / `<div id="app"></div>` empty shells that cause indexing degradation on low-render-budget search bots.
+- **CLI Command**: `siteprobe ssr <url>` for instant terminal inspection with rich formatted diagnostic tables.
+- **MCP Tool**: `check_ssr(url)` enabling AI agents to inspect rendering status on demand.
+- **Unit & Integration Tests**: 6 dedicated SSR tests covering major modern frameworks and CLI rendering.
+
 ## [0.1.0] - 2026-09-16
 
 ### Added

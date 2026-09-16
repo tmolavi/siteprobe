@@ -14,7 +14,7 @@ class CrawlConfig(BaseModel):
     crawl_delay_ms: int = 100
     respect_robots: bool = True
     timeout_seconds: float = 15.0
-    user_agent: str = "SiteProbe/0.1.0 (+https://github.com/tmolavi/siteprobe)"
+    user_agent: str = "SiteProbe/0.1.1 (+https://github.com/tmolavi/siteprobe)"
 
 
 class ChecksConfig(BaseModel):

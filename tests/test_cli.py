@@ -1,4 +1,5 @@
 from typer.testing import CliRunner
+from siteprobe import __version__
 from siteprobe.cli.main import app
 
 runner = CliRunner()
@@ -7,7 +8,7 @@ runner = CliRunner()
 def test_cli_version():
     result = runner.invoke(app, ["--version"])
     assert result.exit_code == 0
-    assert "0.1.0" in result.output
+    assert __version__ in result.output
 
 
 def test_cli_doctor():

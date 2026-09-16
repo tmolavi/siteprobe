@@ -80,7 +80,7 @@ async def check_ssr(url: str) -> Dict[str, Any]:
     """Inspect a URL to check whether it uses Server-Side Rendering (SSR) vs Client-Side (CSR/SPA)."""
     try:
         async with httpx.AsyncClient(
-            headers={"User-Agent": "SiteProbe/0.1.0 MCP-SSR"},
+            headers={"User-Agent": "SiteProbe/0.1.1 MCP-SSR"},
             follow_redirects=True,
             timeout=15.0
         ) as client:
