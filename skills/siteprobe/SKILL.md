@@ -22,6 +22,11 @@ triggers:
   - "fix indexing"
   - "analyze Search Console and fix problems"
   - "inspect website and implement fixes"
+  - "سئو سایتم رو بررسی کن"
+  - "بررسی سئو سایت"
+  - "تست SSR"
+  - "بررسی رندرینگ سایت"
+  - "بهینه‌سازی سئو و رتبه هوش مصنوعی"
 ---
 
 # SiteProbe: Autonomous Website Auditor & Fixer
