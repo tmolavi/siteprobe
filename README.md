@@ -84,25 +84,42 @@ It doesn't just find a missing canonical tag, an unlabelled accessibility input,
 
 ---
 
-## 🔄 Audit → Fix → Verify Workflow
+## 🎯 From Measurement To Action: The Remediation Loop
+
+SiteProbe serves as the **Autonomous Remediation & Verification Engine** for the [Molavi AI Visibility Stack](docs/BENCHMARK_ECOSYSTEM.md), turning empirical findings from [GEO-Scope Benchmarks](https://github.com/tmolavi/geo-scope/tree/main/benchmarks/geo-seo-digital-agency-iran-2026.1) into verified code remediations:
 
 ```text
-┌────────────────┐     ┌───────────────┐     ┌──────────────────┐
-│  PUBLIC AUDIT  │ ──> │   EVIDENCE    │ ──> │ REMEDIATION PLAN │
-└────────────────┘     └───────────────┘     └──────────────────┘
-                                                       │
-┌────────────────┐     ┌───────────────┐               ▼
-│  FINAL REPORT  │ <── │  VERIFICATION │ <── ┌──────────────────┐
-└────────────────┘     └───────────────┘     │    APPLY FIX     │
-                                             └──────────────────┘
+┌─────────────────────────────────┐
+│     1. BENCHMARK FINDING        │  Empirical visibility baseline measured via GEO-Scope
+│   (e.g., Low AI Recommendation) │  (e.g., missing citations, unquoted brand entities)
+└────────────────┬────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────┐
+│        2. DEEP AUDIT            │  SiteProbe / SAGE analyzes DOM, headers, AI crawlers,
+│  (Technical, Entity, Semantic)  │  passage chunk boundaries, and schema structures
+└────────────────┬────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────┐
+│     3. RECOMMENDATION PLAN      │  Deterministic, risk-stratified actionable fixes:
+│  (SAFE_AUTOFIX / MANUAL_REVIEW) │  robots.txt bot policies, JSON-LD graphs, llms.txt
+└────────────────┬────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────┐
+│    4. SAFE IMPLEMENTATION       │  SiteProbe safely modifies source code repository
+│   (Atomic Snapshot & Patch)     │  with automatic rollback on syntax or rule failure
+└────────────────┬────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────┐
+│    5. EMPIRICAL RE-MEASURE      │  GEO-Scope re-executes standardized prompt test suite
+│  (Measure Δ SoM & Citations)    │  to measure verified lift in observed AI visibility
+└─────────────────────────────────┘
 ```
 
-1. **Audit**: Polite, asynchronous crawler parses the site graph, extracts HTML metadata, and catalogs all assets in SQLite.
-2. **Evidence**: Every finding captures the exact HTTP headers, HTML DOM selector, and response timings.
-3. **Plan**: Findings are classified into `SAFE_AUTOFIX`, `REVIEW_RECOMMENDED`, or `MANUAL_ONLY`.
-4. **Fix**: Safe modifications (e.g. inserting canonical tags, creating `robots.txt` / `llms.txt`, setting viewport, fixing alt text) are applied with in-memory snapshots.
-5. **Verify**: The verification engine re-evaluates the rules against the target and produces before/after proof.
-6. **Report**: Comprehensive results rendered in standalone HTML, structured JSON, or Markdown.
+See the [Benchmark Ecosystem Map](docs/BENCHMARK_ECOSYSTEM.md) for full architectural contracts.
 
 ---
 
