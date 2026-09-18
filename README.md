@@ -131,10 +131,14 @@ SiteProbe operates as the autonomous remediation component of the **Molavi AI Vi
 - **Action**: [SiteProbe](https://github.com/tmolavi/siteprobe)
 - **Protocol**: [MCP GEO Server](https://github.com/tmolavi/mcp-geo-server)
 
-## 📖 Sample Audit & Remediation Evidence
+## 📖 Evidence & Remediation Benchmarks
 
-- Audit Findings Payload: [`examples/audit_example.json`](examples/audit_example.json)
-- Verified Fix & Delta Payload: [`examples/fix_example.json`](examples/fix_example.json)
+- **Audit Findings Payload**: [`examples/audit_example.json`](examples/audit_example.json)
+- **Verified Fix & Delta Payload**: [`examples/fix_example.json`](examples/fix_example.json)
+- **Standalone Offline Remediation Demo**: [`examples/public_demo/`](examples/public_demo/)
+- **Live Crawl Report Case Study**: [`siteprobe-report-molavi/audit.md`](siteprobe-report-molavi/audit.md)
+- **Remediation Guide & Safety Protocol**: [`docs/remediation_guide.md`](docs/remediation_guide.md)
+- **Cross-Repository Evidence Map**: [Ecosystem Evidence Flow](https://github.com/tmolavi/geo-scope/blob/main/docs/EVIDENCE_MAP.md)
 
 ---
 
