@@ -1,0 +1,26 @@
+{
+  "url": "https://example.local",
+  "audited_at": "2026-09-18T00:00:00Z",
+  "score": 74,
+  "status": "NEEDS_REMEDIATION",
+  "categories": {
+    "technical": { "score": 85, "issues": ["missing_canonical"] },
+    "schema": { "score": 60, "issues": ["missing_organization_schema"] },
+    "geo_readiness": { "score": 65, "issues": ["missing_llms_txt", "missing_bot_directives"] },
+    "accessibility": { "score": 90, "issues": [] }
+  },
+  "remediation_plan": [
+    {
+      "id": "FIX-001",
+      "rule": "create_llms_txt",
+      "classification": "SAFE_AUTOFIX",
+      "target_file": "public/llms.txt"
+    },
+    {
+      "id": "FIX-002",
+      "rule": "allow_ai_crawlers_robots_txt",
+      "classification": "SAFE_AUTOFIX",
+      "target_file": "public/robots.txt"
+    }
+  ]
+}

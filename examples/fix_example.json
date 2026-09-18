@@ -1,0 +1,22 @@
+{
+  "remediation_run_id": "REM-2026-001",
+  "audit_source": "examples/audit_example.json",
+  "applied_fixes": [
+    {
+      "rule": "create_llms_txt",
+      "target": "public/llms.txt",
+      "status": "APPLIED",
+      "verification_result": "FIXED",
+      "diff": "+ # LLMS.txt for Example Corp\n+ > Generative Engine Optimization Metadata"
+    },
+    {
+      "rule": "allow_ai_crawlers_robots_txt",
+      "target": "public/robots.txt",
+      "status": "APPLIED",
+      "verification_result": "FIXED",
+      "diff": "+ User-agent: GPTBot\n+ Allow: /\n+ User-agent: PerplexityBot\n+ Allow: /"
+    }
+  ],
+  "post_remediation_score": 92,
+  "score_delta": "+18 points"
+}

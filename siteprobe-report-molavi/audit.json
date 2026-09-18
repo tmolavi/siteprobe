@@ -1,0 +1,4639 @@
+{
+  "site_url": "https://molavi.pro",
+  "language": "fa",
+  "timestamp": "2026-09-16T16:45:39.445553+00:00",
+  "crawl_summary": {
+    "start_url": "https://molavi.pro/",
+    "total_crawled": 50,
+    "total_internal_discovered": 50,
+    "total_external_discovered": 0,
+    "broken_links_count": 0,
+    "crawl_duration_seconds": 97.76,
+    "status_codes_distribution": {
+      "200": 47,
+      "0": 3
+    }
+  },
+  "scores": {
+    "overall_score": 68,
+    "category_scores": {
+      "technical_seo": {
+        "category": "technical_seo",
+        "score": 100,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0,
+        "info_count": 0,
+        "deductions": []
+      },
+      "onpage_seo": {
+        "category": "onpage_seo",
+        "score": 78,
+        "critical_count": 0,
+        "high_count": 2,
+        "medium_count": 0,
+        "low_count": 1,
+        "info_count": 0,
+        "deductions": [
+          "[-10] Missing reciprocal hreflang return link on https://molavi.pro/tr/proof",
+          "[-2] Heading level skipped from H1 directly to H4",
+          "[-10] Missing reciprocal hreflang return link on https://molavi.pro/tr/research"
+        ]
+      },
+      "schema_org": {
+        "category": "schema_org",
+        "score": 95,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 1,
+        "low_count": 0,
+        "info_count": 0,
+        "deductions": [
+          "[-5] Missing Organization or WebSite schema on homepage"
+        ]
+      },
+      "geo_aeo": {
+        "category": "geo_aeo",
+        "score": 50,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 1,
+        "low_count": 30,
+        "info_count": 0,
+        "deductions": [
+          "[-5] فایل llms.txt موجود نیست",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema",
+          "[-2] Question-based content found without FAQPage schema"
+        ]
+      },
+      "performance": {
+        "category": "performance",
+        "score": 0,
+        "critical_count": 0,
+        "high_count": 45,
+        "medium_count": 2,
+        "low_count": 0,
+        "info_count": 0,
+        "deductions": [
+          "[-10] Slow Time to First Byte (9346 ms)",
+          "[-10] Slow Time to First Byte (8962 ms)",
+          "[-10] Slow Time to First Byte (22629 ms)",
+          "[-10] Slow Time to First Byte (22817 ms)",
+          "[-10] Slow Time to First Byte (22836 ms)",
+          "[-10] Slow Time to First Byte (4289 ms)",
+          "[-10] Slow Time to First Byte (27555 ms)",
+          "[-10] Slow Time to First Byte (5173 ms)",
+          "[-10] Slow Time to First Byte (4945 ms)",
+          "[-10] Slow Time to First Byte (5017 ms)",
+          "[-10] Slow Time to First Byte (7447 ms)",
+          "[-10] Slow Time to First Byte (2878 ms)",
+          "[-10] Slow Time to First Byte (2930 ms)",
+          "[-10] Slow Time to First Byte (3343 ms)",
+          "[-10] Slow Time to First Byte (3031 ms)",
+          "[-10] Slow Time to First Byte (2490 ms)",
+          "[-10] Slow Time to First Byte (2424 ms)",
+          "[-10] Slow Time to First Byte (3419 ms)",
+          "[-10] Slow Time to First Byte (3480 ms)",
+          "[-5] Moderate server response latency (1027 ms)",
+          "[-5] Moderate server response latency (1084 ms)",
+          "[-10] Slow Time to First Byte (2861 ms)",
+          "[-10] Slow Time to First Byte (2752 ms)",
+          "[-10] Slow Time to First Byte (2937 ms)",
+          "[-10] Slow Time to First Byte (4743 ms)",
+          "[-10] Slow Time to First Byte (2071 ms)",
+          "[-10] Slow Time to First Byte (2093 ms)",
+          "[-10] Slow Time to First Byte (9309 ms)",
+          "[-10] Slow Time to First Byte (8583 ms)",
+          "[-10] Slow Time to First Byte (8675 ms)",
+          "[-10] Slow Time to First Byte (12315 ms)",
+          "[-10] Slow Time to First Byte (3882 ms)",
+          "[-10] Slow Time to First Byte (3908 ms)",
+          "[-10] Slow Time to First Byte (18471 ms)",
+          "[-10] Slow Time to First Byte (20528 ms)",
+          "[-10] Slow Time to First Byte (5834 ms)",
+          "[-10] Slow Time to First Byte (6137 ms)",
+          "[-10] Slow Time to First Byte (5883 ms)",
+          "[-10] Slow Time to First Byte (3737 ms)",
+          "[-10] Slow Time to First Byte (3808 ms)",
+          "[-10] Slow Time to First Byte (3821 ms)",
+          "[-10] Slow Time to First Byte (4117 ms)",
+          "[-10] Slow Time to First Byte (4150 ms)",
+          "[-10] Slow Time to First Byte (11865 ms)",
+          "[-10] Slow Time to First Byte (11893 ms)",
+          "[-10] Slow Time to First Byte (12024 ms)",
+          "[-10] Slow Time to First Byte (12013 ms)"
+        ]
+      },
+      "accessibility": {
+        "category": "accessibility",
+        "score": 40,
+        "critical_count": 0,
+        "high_count": 6,
+        "medium_count": 0,
+        "low_count": 0,
+        "info_count": 0,
+        "deductions": [
+          "[-10] فیلد فرم فاقد برچسب (Label) مرتبط است",
+          "[-10] فیلد فرم فاقد برچسب (Label) مرتبط است",
+          "[-10] فیلد فرم فاقد برچسب (Label) مرتبط است",
+          "[-10] فیلد فرم فاقد برچسب (Label) مرتبط است",
+          "[-10] فیلد فرم فاقد برچسب (Label) مرتبط است",
+          "[-10] فیلد فرم فاقد برچسب (Label) مرتبط است"
+        ]
+      },
+      "security": {
+        "category": "security",
+        "score": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 50,
+        "low_count": 50,
+        "info_count": 0,
+        "deductions": [
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing",
+          "[-5] هدر Strict-Transport-Security (HSTS) موجود نیست",
+          "[-2] X-Content-Type-Options header missing"
+        ]
+      },
+      "content_quality": {
+        "category": "content_quality",
+        "score": 95,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 1,
+        "low_count": 0,
+        "info_count": 0,
+        "deductions": [
+          "[-5] Thin content detected (89 words)"
+        ]
+      },
+      "ux": {
+        "category": "ux",
+        "score": 100,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0,
+        "info_count": 0,
+        "deductions": []
+      }
+    },
+    "geo_score": 50,
+    "geo_score_breakdown": {
+      "ai_crawler_access": 40,
+      "llms_txt_presence": 0,
+      "entity_authorship": 10,
+      "qa_semantic_structure": 0
+    },
+    "methodology": "Overall score is a deterministic weighted composite: Technical (25%), On-Page (20%), Schema (15%), GEO/AEO (15%), Accessibility (15%), Security (10%). Deductions per category are: Critical (-25), High (-10), Medium (-5), Low (-2), bounded between 0 and 100. GEO score is evaluated directly on 4 transparent pillars: AI crawler access (40 pts), llms.txt availability (20 pts), Entity & authorship structure (20 pts), and QA semantic markup (20 pts)."
+  },
+  "findings": [
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "schema.entity.missing_organization",
+      "category": "schema_org",
+      "severity": "medium",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/",
+      "title": "Missing Organization or WebSite schema on homepage",
+      "evidence": {
+        "schema_types_found": []
+      },
+      "why_it_matters": "Organization schema establishes authoritative brand identity, official logos, and social proof in Google Knowledge Graph.",
+      "recommended_action": "Inject an 'Organization' schema.org JSON-LD snippet with name, url, logo, and sameAs links.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "schema.structured_data"
+    },
+    {
+      "id": "geo.llms_txt.missing",
+      "category": "geo_aeo",
+      "severity": "medium",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/",
+      "title": "فایل llms.txt موجود نیست",
+      "evidence": {
+        "path_checked": "/llms.txt"
+      },
+      "why_it_matters": "فایل llms.txt خلاصه‌ای بهینه برای خزنده‌ها و مدل‌های هوش مصنوعی فراهم می‌سازد.",
+      "recommended_action": "یک فایل استاندارد /llms.txt حاوی معرفی هویت و اسناد کلیدی سایت ایجاد کنید.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "What Is a Digital Twin? Architecture and Uses",
+          "How to Curate MCP Agent Skills for Reliable AI Work"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/",
+      "title": "Slow Time to First Byte (9346 ms)",
+      "evidence": {
+        "response_time_ms": 9346
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/digital-pr-ai-elecomp-1405",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/digital-pr-ai-elecomp-1405",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/digital-pr-ai-elecomp-1405",
+      "title": "Slow Time to First Byte (8962 ms)",
+      "evidence": {
+        "response_time_ms": 8962
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "accessibility.form.unlabeled_input",
+      "category": "accessibility",
+      "severity": "high",
+      "confidence": 0.98,
+      "url": "https://molavi.pro/notes/digital-pr-ai-elecomp-1405",
+      "title": "فیلد فرم فاقد برچسب (Label) مرتبط است",
+      "evidence": {
+        "snippets": [
+          "<input autocomplete=\"off\" name=\"company\" tabindex=\"-1\"/>",
+          "<input aria-hidden=\"true\" class=\"hidden\" name=\"phone\" tabindex=\"-1\"/>",
+          "<input aria-hidden=\"true\" class=\"hidden\" name=\"website\" tabindex=\"-1\"/>"
+        ],
+        "count": 3
+      },
+      "why_it_matters": "کاربران ابزارهای کمکی نمی‌توانند کاربرد فیلدهای بدون برچسب را تشخیص دهند.",
+      "recommended_action": "تگ <label for=\"...\"> مرتبط یا ویژگی aria-label را به فیلد ورودی اضافه کنید.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "accessibility.wcag"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/proof",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/proof",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "onpage.hreflang.missing_return_link",
+      "category": "onpage_seo",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/proof",
+      "title": "Missing reciprocal hreflang return link on https://molavi.pro/tr/proof",
+      "evidence": {
+        "source": "https://molavi.pro/proof",
+        "target": "https://molavi.pro/tr/proof",
+        "declared_lang": "tr"
+      },
+      "why_it_matters": "Google ignores hreflang annotations if the target page does not link back with a matching hreflang tag.",
+      "recommended_action": "Add reciprocal hreflang annotation on https://molavi.pro/tr/proof referencing https://molavi.pro/proof.",
+      "auto_fixable": true,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "source_code",
+      "verification_check": "onpage.hreflang"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/proof",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "What this page is for",
+          "Why this matters to a business",
+          "Why open source?",
+          "If you do not know how your brand appears in AI answers, start here."
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/proof",
+      "title": "Slow Time to First Byte (22629 ms)",
+      "evidence": {
+        "response_time_ms": 22629
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/contact",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/contact",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "onpage.headings.skipped_level",
+      "category": "onpage_seo",
+      "severity": "low",
+      "confidence": 0.9,
+      "url": "https://molavi.pro/contact",
+      "title": "Heading level skipped from H1 directly to H4",
+      "evidence": {
+        "previous_level": "H1",
+        "next_level": "H4"
+      },
+      "why_it_matters": "Skipping heading levels violates semantic document outlines and degrades accessibility.",
+      "recommended_action": "Restructure heading tags to follow an incremental hierarchical order without skipping levels.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "source_code",
+      "verification_check": "onpage.headings"
+    },
+    {
+      "id": "content.quality.thin_content",
+      "category": "content_quality",
+      "severity": "medium",
+      "confidence": 0.85,
+      "url": "https://molavi.pro/contact",
+      "title": "Thin content detected (89 words)",
+      "evidence": {
+        "word_count": 89
+      },
+      "why_it_matters": "Pages with little substantive content struggle to rank and risk being classified as low-quality by search algorithms.",
+      "recommended_action": "Enrich the page with comprehensive, helpful content addressing user intent.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "source_code",
+      "verification_check": "onpage.content"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/contact",
+      "title": "Slow Time to First Byte (22817 ms)",
+      "evidence": {
+        "response_time_ms": 22817
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/research",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/research",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "onpage.hreflang.missing_return_link",
+      "category": "onpage_seo",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/research",
+      "title": "Missing reciprocal hreflang return link on https://molavi.pro/tr/research",
+      "evidence": {
+        "source": "https://molavi.pro/research",
+        "target": "https://molavi.pro/tr/research",
+        "declared_lang": "tr"
+      },
+      "why_it_matters": "Google ignores hreflang annotations if the target page does not link back with a matching hreflang tag.",
+      "recommended_action": "Add reciprocal hreflang annotation on https://molavi.pro/tr/research referencing https://molavi.pro/research.",
+      "auto_fixable": true,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "source_code",
+      "verification_check": "onpage.hreflang"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/research",
+      "title": "Slow Time to First Byte (22836 ms)",
+      "evidence": {
+        "response_time_ms": 22836
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/first-websites-to-ai-visibility",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/first-websites-to-ai-visibility",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/first-websites-to-ai-visibility",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "Why Good Brands Still Disappear",
+          "What I Focus On Today"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/first-websites-to-ai-visibility",
+      "title": "Slow Time to First Byte (4289 ms)",
+      "evidence": {
+        "response_time_ms": 4289
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "accessibility.form.unlabeled_input",
+      "category": "accessibility",
+      "severity": "high",
+      "confidence": 0.98,
+      "url": "https://molavi.pro/notes/first-websites-to-ai-visibility",
+      "title": "فیلد فرم فاقد برچسب (Label) مرتبط است",
+      "evidence": {
+        "snippets": [
+          "<input aria-hidden=\"true\" autocomplete=\"off\" class=\"sr-only\" name=\"website\" tabindex=\"-1\" value=\"\"/>",
+          "<input class=\"rounded-md border border-white/10 bg-[#02090f] px-3 py-3 text-sm text-white outline-no",
+          "<input class=\"rounded-md border border-white/10 bg-[#02090f] px-3 py-3 text-sm text-white outline-no"
+        ],
+        "count": 3
+      },
+      "why_it_matters": "کاربران ابزارهای کمکی نمی‌توانند کاربرد فیلدهای بدون برچسب را تشخیص دهند.",
+      "recommended_action": "تگ <label for=\"...\"> مرتبط یا ویژگی aria-label را به فیلد ورودی اضافه کنید.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "accessibility.wcag"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "How to Curate MCP Agent Skills for Reliable AI Work",
+          "Why Coding Agents Need Project Discovery Before They Edit",
+          "How to Evaluate an AI Coding-Agent Skills Directory",
+          "Why Are Some Brands Missing from AI Answers?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes",
+      "title": "Slow Time to First Byte (27555 ms)",
+      "evidence": {
+        "response_time_ms": 27555
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/what-is-seo",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/what-is-seo",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/what-is-seo",
+      "title": "Slow Time to First Byte (5173 ms)",
+      "evidence": {
+        "response_time_ms": 5173
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/what-is-geo",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/what-is-geo",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/what-is-geo",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "Can GEO Work Without a Website?",
+          "Why SEO Is the Prerequisite"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/what-is-geo",
+      "title": "Slow Time to First Byte (4945 ms)",
+      "evidence": {
+        "response_time_ms": 4945
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/what-is-aeo",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/what-is-aeo",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/what-is-aeo",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "What AEO Actually Means",
+          "Why SEO Comes Before AEO"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/what-is-aeo",
+      "title": "Slow Time to First Byte (5017 ms)",
+      "evidence": {
+        "response_time_ms": 5017
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/healthcare-ai-visibility-digital-trust",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/healthcare-ai-visibility-digital-trust",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/healthcare-ai-visibility-digital-trust",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "Is SEO becoming obsolete?",
+          "Should healthcare organizations stop investing in content marketing?",
+          "Does AI replace Google Search?",
+          "What is the biggest competitive advantage in the AI era?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/healthcare-ai-visibility-digital-trust",
+      "title": "Slow Time to First Byte (7447 ms)",
+      "evidence": {
+        "response_time_ms": 7447
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/next-layer",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/next-layer",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/next-layer",
+      "title": "Slow Time to First Byte (2878 ms)",
+      "evidence": {
+        "response_time_ms": 2878
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/geo-project-roi",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/geo-project-roi",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/geo-project-roi",
+      "title": "Slow Time to First Byte (2930 ms)",
+      "evidence": {
+        "response_time_ms": 2930
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/what-is-ai-visibility",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/what-is-ai-visibility",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/what-is-ai-visibility",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "Why SEO, AEO, and GEO Work Together",
+          "Why One Strategist Can Own This"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/what-is-ai-visibility",
+      "title": "Slow Time to First Byte (3343 ms)",
+      "evidence": {
+        "response_time_ms": 3343
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/ai-visibility-services",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/ai-visibility-services",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/ai-visibility-services",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "What AI Visibility Really Means",
+          "Why This Is Not Separate From SEO and GEO"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/ai-visibility-services",
+      "title": "Slow Time to First Byte (3031 ms)",
+      "evidence": {
+        "response_time_ms": 3031
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/network-civilization",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/network-civilization",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/network-civilization",
+      "title": "Slow Time to First Byte (2490 ms)",
+      "evidence": {
+        "response_time_ms": 2490
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/geo-is-not-the-new-seo",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/geo-is-not-the-new-seo",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/geo-is-not-the-new-seo",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "What to build",
+          "Is GEO an official Google ranking factor?",
+          "Can a brand have GEO visibility without a website?",
+          "What should be measured first?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/geo-is-not-the-new-seo",
+      "title": "Slow Time to First Byte (2424 ms)",
+      "evidence": {
+        "response_time_ms": 2424
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/founder-personality-seo-ai-visibility",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/founder-personality-seo-ai-visibility",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/founder-personality-seo-ai-visibility",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "When a strength becomes authority",
+          "How the same strength creates SEO problems",
+          "A personal brand is what the web infers",
+          "Does this page add experience or only repeat a definition?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/founder-personality-seo-ai-visibility",
+      "title": "Slow Time to First Byte (3419 ms)",
+      "evidence": {
+        "response_time_ms": 3419
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/search-engineering-semantic-seo-ai",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/search-engineering-semantic-seo-ai",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/search-engineering-semantic-seo-ai",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "Why raw mass content is dangerous",
+          "Where SEO meets software engineering",
+          "Why agile teams can outperform large organizations"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/search-engineering-semantic-seo-ai",
+      "title": "Slow Time to First Byte (3480 ms)",
+      "evidence": {
+        "response_time_ms": 3480
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/evidence-architecture-for-ai",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/evidence-architecture-for-ai",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "performance.ttfb.moderate",
+      "category": "performance",
+      "severity": "medium",
+      "confidence": 0.9,
+      "url": "https://molavi.pro/notes/evidence-architecture-for-ai",
+      "title": "Moderate server response latency (1027 ms)",
+      "evidence": {
+        "response_time_ms": 1027
+      },
+      "why_it_matters": "Google recommends server response times under 200ms for optimal Core Web Vitals.",
+      "recommended_action": "Review caching layers and edge delivery configurations.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/ai-experts-research",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/ai-experts-research",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/ai-experts-research",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "What to record",
+          "What the study can—and cannot—show"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.moderate",
+      "category": "performance",
+      "severity": "medium",
+      "confidence": 0.9,
+      "url": "https://molavi.pro/notes/ai-experts-research",
+      "title": "Moderate server response latency (1084 ms)",
+      "evidence": {
+        "response_time_ms": 1084
+      },
+      "why_it_matters": "Google recommends server response times under 200ms for optimal Core Web Vitals.",
+      "recommended_action": "Review caching layers and edge delivery configurations.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/default-answer-search-visibility",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/default-answer-search-visibility",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/default-answer-search-visibility",
+      "title": "Slow Time to First Byte (2861 ms)",
+      "evidence": {
+        "response_time_ms": 2861
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/ai-seo-brand-visibility",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/ai-seo-brand-visibility",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/ai-seo-brand-visibility",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "Why do some brands appear more often?",
+          "What can we learn from familiar brands?",
+          "Zara: people have a clear idea of what it is",
+          "What should your brand do?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/ai-seo-brand-visibility",
+      "title": "Slow Time to First Byte (2752 ms)",
+      "evidence": {
+        "response_time_ms": 2752
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/measuring-ai-visibility",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/measuring-ai-visibility",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/measuring-ai-visibility",
+      "title": "Slow Time to First Byte (2937 ms)",
+      "evidence": {
+        "response_time_ms": 2937
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/simplify-before-you-automate",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/simplify-before-you-automate",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/simplify-before-you-automate",
+      "title": "Slow Time to First Byte (4743 ms)",
+      "evidence": {
+        "response_time_ms": 4743
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "accessibility.form.unlabeled_input",
+      "category": "accessibility",
+      "severity": "high",
+      "confidence": 0.98,
+      "url": "https://molavi.pro/notes/simplify-before-you-automate",
+      "title": "فیلد فرم فاقد برچسب (Label) مرتبط است",
+      "evidence": {
+        "snippets": [
+          "<input aria-hidden=\"true\" autocomplete=\"off\" class=\"sr-only\" name=\"website\" tabindex=\"-1\" value=\"\"/>",
+          "<input class=\"rounded-md border border-white/10 bg-[#02090f] px-3 py-3 text-sm text-white outline-no",
+          "<input class=\"rounded-md border border-white/10 bg-[#02090f] px-3 py-3 text-sm text-white outline-no"
+        ],
+        "count": 3
+      },
+      "why_it_matters": "کاربران ابزارهای کمکی نمی‌توانند کاربرد فیلدهای بدون برچسب را تشخیص دهند.",
+      "recommended_action": "تگ <label for=\"...\"> مرتبط یا ویژگی aria-label را به فیلد ورودی اضافه کنید.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "accessibility.wcag"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/geo-scope-ai-visibility-benchmark",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/geo-scope-ai-visibility-benchmark",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/geo-scope-ai-visibility-benchmark",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "What is GEO-Scope, in plain English?",
+          "What does it measure?",
+          "Why should a business care?",
+          "How do you try it?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/geo-scope-ai-visibility-benchmark",
+      "title": "Slow Time to First Byte (2071 ms)",
+      "evidence": {
+        "response_time_ms": 2071
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "accessibility.form.unlabeled_input",
+      "category": "accessibility",
+      "severity": "high",
+      "confidence": 0.98,
+      "url": "https://molavi.pro/notes/geo-scope-ai-visibility-benchmark",
+      "title": "فیلد فرم فاقد برچسب (Label) مرتبط است",
+      "evidence": {
+        "snippets": [
+          "<input aria-hidden=\"true\" autocomplete=\"off\" class=\"sr-only\" name=\"website\" tabindex=\"-1\" value=\"\"/>",
+          "<input class=\"rounded-md border border-white/10 bg-[#02090f] px-3 py-3 text-sm text-white outline-no",
+          "<input class=\"rounded-md border border-white/10 bg-[#02090f] px-3 py-3 text-sm text-white outline-no"
+        ],
+        "count": 3
+      },
+      "why_it_matters": "کاربران ابزارهای کمکی نمی‌توانند کاربرد فیلدهای بدون برچسب را تشخیص دهند.",
+      "recommended_action": "تگ <label for=\"...\"> مرتبط یا ویژگی aria-label را به فیلد ورودی اضافه کنید.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "accessibility.wcag"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/why-brands-ignored-in-ai-answers",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/why-brands-ignored-in-ai-answers",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/why-brands-ignored-in-ai-answers",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "What the six research charts suggest",
+          "6. A five-layer funnel for testing where a brand disappears",
+          "How to read the numbers in this research",
+          "How to test whether your brand is actually overlooked"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/why-brands-ignored-in-ai-answers",
+      "title": "Slow Time to First Byte (2093 ms)",
+      "evidence": {
+        "response_time_ms": 2093
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "accessibility.form.unlabeled_input",
+      "category": "accessibility",
+      "severity": "high",
+      "confidence": 0.98,
+      "url": "https://molavi.pro/notes/why-brands-ignored-in-ai-answers",
+      "title": "فیلد فرم فاقد برچسب (Label) مرتبط است",
+      "evidence": {
+        "snippets": [
+          "<input aria-hidden=\"true\" autocomplete=\"off\" class=\"sr-only\" name=\"website\" tabindex=\"-1\" value=\"\"/>",
+          "<input class=\"rounded-md border border-white/10 bg-[#02090f] px-3 py-3 text-sm text-white outline-no",
+          "<input class=\"rounded-md border border-white/10 bg-[#02090f] px-3 py-3 text-sm text-white outline-no"
+        ],
+        "count": 3
+      },
+      "why_it_matters": "کاربران ابزارهای کمکی نمی‌توانند کاربرد فیلدهای بدون برچسب را تشخیص دهند.",
+      "recommended_action": "تگ <label for=\"...\"> مرتبط یا ویژگی aria-label را به فیلد ورودی اضافه کنید.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "accessibility.wcag"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/media-age-ai",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/media-age-ai",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/media-age-ai",
+      "title": "Slow Time to First Byte (9309 ms)",
+      "evidence": {
+        "response_time_ms": 9309
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/n8n-agent-skills-verifiable-automation",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/n8n-agent-skills-verifiable-automation",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/n8n-agent-skills-verifiable-automation",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "2. Real experience: why I built n8n Agent Skills",
+          "Does n8n Agent Skills make an AI agent reliable by itself?",
+          "Why is a green n8n execution insufficient?",
+          "What should builders measure first?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/n8n-agent-skills-verifiable-automation",
+      "title": "Slow Time to First Byte (8583 ms)",
+      "evidence": {
+        "response_time_ms": 8583
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/enterprise-seo-geo-architecture",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/enterprise-seo-geo-architecture",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/enterprise-seo-geo-architecture",
+      "title": "Slow Time to First Byte (8675 ms)",
+      "evidence": {
+        "response_time_ms": 8675
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/mcp-agent-skills-hub-curation",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/mcp-agent-skills-hub-curation",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/mcp-agent-skills-hub-curation",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "Why does this matter to the industry?",
+          "Why the problem exists",
+          "What problem does this project solve?",
+          "Is its output a performance guarantee?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/mcp-agent-skills-hub-curation",
+      "title": "Slow Time to First Byte (12315 ms)",
+      "evidence": {
+        "response_time_ms": 12315
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/mcp-geo-server-rag-readiness",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/mcp-geo-server-rag-readiness",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/mcp-geo-server-rag-readiness",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "Why does this matter to the industry?",
+          "Why the problem exists",
+          "What problem does this project solve?",
+          "Is its output a performance guarantee?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/mcp-geo-server-rag-readiness",
+      "title": "Slow Time to First Byte (3882 ms)",
+      "evidence": {
+        "response_time_ms": 3882
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/geo-scope-reproducible-benchmark",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/geo-scope-reproducible-benchmark",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/geo-scope-reproducible-benchmark",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "Why does this matter to the industry?",
+          "Why the problem exists",
+          "What problem does this project solve?",
+          "Is its output a performance guarantee?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/geo-scope-reproducible-benchmark",
+      "title": "Slow Time to First Byte (3908 ms)",
+      "evidence": {
+        "response_time_ms": 3908
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/local-geo-iran-complete-guide",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/local-geo-iran-complete-guide",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/local-geo-iran-complete-guide",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "What is Local GEO?",
+          "Why every market needs a localized playbook",
+          "What not to do",
+          "Does Local GEO replace SEO?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/local-geo-iran-complete-guide",
+      "title": "Slow Time to First Byte (18471 ms)",
+      "evidence": {
+        "response_time_ms": 18471
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/seo-ai-search-news-august-2026",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/seo-ai-search-news-august-2026",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/seo-ai-search-news-august-2026",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "What is confirmed, and what is still a report?",
+          "What the August numbers can and cannot tell us",
+          "Does an AI impression mean that my site received a visitor?",
+          "Should I rewrite every article for AI Overviews?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/seo-ai-search-news-august-2026",
+      "title": "Slow Time to First Byte (20528 ms)",
+      "evidence": {
+        "response_time_ms": 20528
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "accessibility.form.unlabeled_input",
+      "category": "accessibility",
+      "severity": "high",
+      "confidence": 0.98,
+      "url": "https://molavi.pro/notes/seo-ai-search-news-august-2026",
+      "title": "فیلد فرم فاقد برچسب (Label) مرتبط است",
+      "evidence": {
+        "snippets": [
+          "<input aria-hidden=\"true\" autocomplete=\"off\" class=\"sr-only\" name=\"website\" tabindex=\"-1\" value=\"\"/>",
+          "<input class=\"rounded-md border border-white/10 bg-[#02090f] px-3 py-3 text-sm text-white outline-no",
+          "<input class=\"rounded-md border border-white/10 bg-[#02090f] px-3 py-3 text-sm text-white outline-no"
+        ],
+        "count": 3
+      },
+      "why_it_matters": "کاربران ابزارهای کمکی نمی‌توانند کاربرد فیلدهای بدون برچسب را تشخیص دهند.",
+      "recommended_action": "تگ <label for=\"...\"> مرتبط یا ویژگی aria-label را به فیلد ورودی اضافه کنید.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "accessibility.wcag"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/laravel-ai-summary-provider-architecture",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/laravel-ai-summary-provider-architecture",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/laravel-ai-summary-provider-architecture",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "Why does this matter to the industry?",
+          "Why the problem exists",
+          "What problem does this project solve?",
+          "Is its output a performance guarantee?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/laravel-ai-summary-provider-architecture",
+      "title": "Slow Time to First Byte (5834 ms)",
+      "evidence": {
+        "response_time_ms": 5834
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/sage-audit-three-pillars",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/sage-audit-three-pillars",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/sage-audit-three-pillars",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "Why does this matter to the industry?",
+          "Why the problem exists",
+          "What problem does this project solve?",
+          "Is its output a performance guarantee?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/sage-audit-three-pillars",
+      "title": "Slow Time to First Byte (6137 ms)",
+      "evidence": {
+        "response_time_ms": 6137
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/agent-project-discovery-before-editing",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/agent-project-discovery-before-editing",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/agent-project-discovery-before-editing",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "Why does this matter to the industry?",
+          "Why the problem exists",
+          "What problem does this project solve?",
+          "Is its output a performance guarantee?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/agent-project-discovery-before-editing",
+      "title": "Slow Time to First Byte (5883 ms)",
+      "evidence": {
+        "response_time_ms": 5883
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/research/sage-audit-open-source-engine",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/research/sage-audit-open-source-engine",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/research/sage-audit-open-source-engine",
+      "title": "Slow Time to First Byte (3737 ms)",
+      "evidence": {
+        "response_time_ms": 3737
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/research/vpa-rag-semantic-entropy",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/research/vpa-rag-semantic-entropy",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/research/vpa-rag-semantic-entropy",
+      "title": "Slow Time to First Byte (3808 ms)",
+      "evidence": {
+        "response_time_ms": 3808
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/answerpath-geo-question-mining",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/answerpath-geo-question-mining",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/answerpath-geo-question-mining",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "Why does this matter to the industry?",
+          "Why the problem exists",
+          "Does AnswerPath reveal what everyone asks?",
+          "Is it a keyword tool?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/answerpath-geo-question-mining",
+      "title": "Slow Time to First Byte (3821 ms)",
+      "evidence": {
+        "response_time_ms": 3821
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/awesome-skills-directory-evaluation",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/awesome-skills-directory-evaluation",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/awesome-skills-directory-evaluation",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "Why does this matter to the industry?",
+          "Why the problem exists",
+          "What problem does this project solve?",
+          "Is its output a performance guarantee?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/awesome-skills-directory-evaluation",
+      "title": "Slow Time to First Byte (4117 ms)",
+      "evidence": {
+        "response_time_ms": 4117
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/lean-agent-skills-context-efficiency",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/notes/lean-agent-skills-context-efficiency",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/notes/lean-agent-skills-context-efficiency",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "Why does this matter to the industry?",
+          "Why the problem exists",
+          "What problem does this project solve?",
+          "Is its output a performance guarantee?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/notes/lean-agent-skills-context-efficiency",
+      "title": "Slow Time to First Byte (4150 ms)",
+      "evidence": {
+        "response_time_ms": 4150
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/research/digital-twin-what-is",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/research/digital-twin-what-is",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/research/digital-twin-what-is",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "How a digital twin works",
+          "What I learned while building Hamzad",
+          "Does a digital twin need sensors?",
+          "Is a 3D model a digital twin?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/research/digital-twin-what-is",
+      "title": "Slow Time to First Byte (11865 ms)",
+      "evidence": {
+        "response_time_ms": 11865
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/tr",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/tr",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/tr",
+      "title": "Slow Time to First Byte (11893 ms)",
+      "evidence": {
+        "response_time_ms": 11893
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/research/geo-pyramid",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "x-middleware-rewrite",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/research/geo-pyramid",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/research/geo-pyramid",
+      "title": "Slow Time to First Byte (12024 ms)",
+      "evidence": {
+        "response_time_ms": 12024
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/tr/notes",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": [
+          "server",
+          "date",
+          "content-type",
+          "transfer-encoding",
+          "connection",
+          "content-language",
+          "vary",
+          "link",
+          "x-powered-by",
+          "cache-control",
+          "content-encoding"
+        ]
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/tr/notes",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "geo.structure.missing_faq_schema",
+      "category": "geo_aeo",
+      "severity": "low",
+      "confidence": 0.88,
+      "url": "https://molavi.pro/tr/notes",
+      "title": "Question-based content found without FAQPage schema",
+      "evidence": {
+        "question_headings": [
+          "Kodlama Ajanları Düzenlemeden Önce Projeyi Neden Keşfetmeli?",
+          "AI Coding Agent Skill Dizini Nasıl Değerlendirilir?",
+          "Bazı Markalar Yapay Zeka Yanıtlarında Neden Yer Almaz?",
+          "Kurucu Kişiliği SEO ve Yapay Zekayı Nasıl Etkiler?"
+        ]
+      },
+      "why_it_matters": "Structuring conversational question-and-answer sections with FAQPage schema boosts eligibility for AI answer snippets.",
+      "recommended_action": "Add FAQPage schema.org JSON-LD to clearly demarcate Questions and Answers.",
+      "auto_fixable": true,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "source_code",
+      "verification_check": "geo.ai_search"
+    },
+    {
+      "id": "performance.ttfb.slow",
+      "category": "performance",
+      "severity": "high",
+      "confidence": 0.95,
+      "url": "https://molavi.pro/tr/notes",
+      "title": "Slow Time to First Byte (12013 ms)",
+      "evidence": {
+        "response_time_ms": 12013
+      },
+      "why_it_matters": "High TTFB directly harms Core Web Vitals (LCP) and causes user abandonment on mobile connections.",
+      "recommended_action": "Enable server-side page caching, use a CDN, or optimize backend database queries.",
+      "auto_fixable": false,
+      "risk_class": "MANUAL_ONLY",
+      "required_capability": "server_ssh",
+      "verification_check": "performance.heuristics"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/research/geo-methods-and-techniques",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": []
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/research/geo-methods-and-techniques",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/tr/research",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": []
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/tr/research",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_hsts",
+      "category": "security",
+      "severity": "medium",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/tr/proof",
+      "title": "هدر Strict-Transport-Security (HSTS) موجود نیست",
+      "evidence": {
+        "headers_checked": []
+      },
+      "why_it_matters": "پروتکل HSTS ارتباط امن HTTPS را اجباری کرده و از حملات مرد میانی محافظت می‌کند.",
+      "recommended_action": "وب‌سرور را برای ارسال هدر HSTS با max-age معتبر پیکربندی کنید.",
+      "auto_fixable": false,
+      "risk_class": "REVIEW_RECOMMENDED",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    },
+    {
+      "id": "technical.security.missing_xcto",
+      "category": "security",
+      "severity": "low",
+      "confidence": 1.0,
+      "url": "https://molavi.pro/tr/proof",
+      "title": "X-Content-Type-Options header missing",
+      "evidence": {},
+      "why_it_matters": "Prevents MIME-sniffing vulnerabilities where browsers interpret non-executable files as executable.",
+      "recommended_action": "Add header: 'X-Content-Type-Options: nosniff'.",
+      "auto_fixable": false,
+      "risk_class": "SAFE_AUTOFIX",
+      "required_capability": "server_ssh",
+      "verification_check": "technical.security"
+    }
+  ],
+  "remediation_plan": null,
+  "missing_capabilities": [
+    {
+      "name": "Google Search Console",
+      "description": "Organic search performance metrics (clicks, impressions, average positions, keyword queries).",
+      "why_it_improves_audit": "Identifies high-impression queries with weak CTR, tracks ranking drops, and validates Google indexing coverage.",
+      "how_to_enable": "Set GOOGLE_APPLICATION_CREDENTIALS or ask user to authenticate via browser session."
+    },
+    {
+      "name": "Google Analytics 4 (GA4)",
+      "description": "Real-world user behavioral and organic landing page conversion metrics.",
+      "why_it_improves_audit": "Connects technical crawl defects directly to user drop-offs and lost conversions.",
+      "how_to_enable": "Configure GA4_PROPERTY_ID and OAuth service account credentials."
+    },
+    {
+      "name": "Google Lighthouse / Chrome",
+      "description": "Lab-tested Core Web Vitals (LCP, CLS, INP/TBT) and synthetic visual rendering metrics.",
+      "why_it_improves_audit": "Provides granular rendering waterfall insights beyond server TTFB.",
+      "how_to_enable": "Install Node.js and Chrome, or pass --lighthouse CLI flag."
+    },
+    {
+      "name": "Playwright Browser Session",
+      "description": "Headless browser automation for client-side rendered SPAs and visual viewport screenshots.",
+      "why_it_improves_audit": "Enables auditing JavaScript-only single page apps (React/Vue/Angular) and visual overflow verification.",
+      "how_to_enable": "Run 'pip install siteprobe[browser] && playwright install chromium'."
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://molavi.pro/",
+      "status_code": 200,
+      "title": "Taghi Molavi | SEO Strategy & GEO Consulting",
+      "depth": 0,
+      "response_time_ms": 9346.0,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/digital-pr-ai-elecomp-1405",
+      "status_code": 200,
+      "title": "Digital PR and AI at Elecomp 1405",
+      "depth": 1,
+      "response_time_ms": 8961.8,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/proof",
+      "status_code": 200,
+      "title": "Verifiable Evidence & Architectural Impact | Taqi Molavi",
+      "depth": 1,
+      "response_time_ms": 22629.1,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/contact",
+      "status_code": 200,
+      "title": "Request a project review | Taghi Molavi",
+      "depth": 1,
+      "response_time_ms": 22817.3,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/research",
+      "status_code": 200,
+      "title": "Research | Taghi Molavi",
+      "depth": 1,
+      "response_time_ms": 22835.7,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/first-websites-to-ai-visibility",
+      "status_code": 200,
+      "title": "From the First Websites to AI Visibility",
+      "depth": 1,
+      "response_time_ms": 4288.6,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes",
+      "status_code": 200,
+      "title": "NOTES / JOURNAL | Taghi Molavi",
+      "depth": 1,
+      "response_time_ms": 27555.4,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/what-is-seo",
+      "status_code": 200,
+      "title": "What Is SEO? Foundations for Search and AI",
+      "depth": 1,
+      "response_time_ms": 5173.4,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/what-is-geo",
+      "status_code": 200,
+      "title": "What Is GEO? Generative Engine Optimization",
+      "depth": 1,
+      "response_time_ms": 4945.2,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/what-is-aeo",
+      "status_code": 200,
+      "title": "What Is AEO? Answer Engine Optimization Explained",
+      "depth": 1,
+      "response_time_ms": 5017.2,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/healthcare-ai-visibility-digital-trust",
+      "status_code": 200,
+      "title": "AI Visibility and Digital Trust in Healthcare",
+      "depth": 1,
+      "response_time_ms": 7446.9,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/next-layer",
+      "status_code": 200,
+      "title": "The Next Layer of the Internet",
+      "depth": 1,
+      "response_time_ms": 2878.4,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/geo-project-roi",
+      "status_code": 200,
+      "title": "GEO ROI: Connecting Brand Visibility to Sales",
+      "depth": 1,
+      "response_time_ms": 2929.7,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/what-is-ai-visibility",
+      "status_code": 200,
+      "title": "What Is AI Visibility? Brand Mentions and Citations",
+      "depth": 1,
+      "response_time_ms": 3343.5,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/ai-visibility-services",
+      "status_code": 200,
+      "title": "AI Visibility Services: Preparing Your Brand",
+      "depth": 1,
+      "response_time_ms": 3030.9,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/network-civilization",
+      "status_code": 200,
+      "title": "Network Civilization: Trust and Collaboration",
+      "depth": 1,
+      "response_time_ms": 2490.0,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/geo-is-not-the-new-seo",
+      "status_code": 200,
+      "title": "GEO Is Not the New SEO: Key Strategic Differences",
+      "depth": 1,
+      "response_time_ms": 2423.9,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/founder-personality-seo-ai-visibility",
+      "status_code": 200,
+      "title": "How Founder Personality Shapes SEO and AI Visibility",
+      "depth": 1,
+      "response_time_ms": 3419.3,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/search-engineering-semantic-seo-ai",
+      "status_code": 200,
+      "title": "Search Engineering: Semantic SEO and AI Search",
+      "depth": 1,
+      "response_time_ms": 3480.5,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/evidence-architecture-for-ai",
+      "status_code": 200,
+      "title": "Evidence Architecture: Making Brands Citable",
+      "depth": 1,
+      "response_time_ms": 1027.3,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/ai-experts-research",
+      "status_code": 200,
+      "title": "How AI Models Name SEO and GEO Experts",
+      "depth": 1,
+      "response_time_ms": 1084.3,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/default-answer-search-visibility",
+      "status_code": 200,
+      "title": "From Ranking First to Becoming the Default Answer",
+      "depth": 1,
+      "response_time_ms": 2861.4,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/ai-seo-brand-visibility",
+      "status_code": 200,
+      "title": "Why Some Brands Stand Out in AI Search",
+      "depth": 1,
+      "response_time_ms": 2751.6,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/measuring-ai-visibility",
+      "status_code": 200,
+      "title": "Measuring AI Visibility: Common Reporting Errors",
+      "depth": 1,
+      "response_time_ms": 2936.5,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/simplify-before-you-automate",
+      "status_code": 200,
+      "title": "Simplify Your Business Processes Before Automating",
+      "depth": 1,
+      "response_time_ms": 4743.0,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/geo-scope-ai-visibility-benchmark",
+      "status_code": 200,
+      "title": "GEO-Scope: Measuring Brand Visibility in AI Answers",
+      "depth": 1,
+      "response_time_ms": 2071.2,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/why-brands-ignored-in-ai-answers",
+      "status_code": 200,
+      "title": "Why Are Some Brands Missing from AI Answers?",
+      "depth": 1,
+      "response_time_ms": 2093.1,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/media-age-ai",
+      "status_code": 200,
+      "title": "Media in the Age of AI",
+      "depth": 1,
+      "response_time_ms": 9308.8,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/n8n-agent-skills-verifiable-automation",
+      "status_code": 200,
+      "title": "n8n Agent Skills: AI Agent Validation",
+      "depth": 1,
+      "response_time_ms": 8583.2,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/enterprise-seo-geo-architecture",
+      "status_code": 200,
+      "title": "Enterprise SEO and GEO: Architecture at Scale",
+      "depth": 1,
+      "response_time_ms": 8675.2,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/mcp-agent-skills-hub-curation",
+      "status_code": 200,
+      "title": "How to Curate MCP Agent Skills for Reliable AI Work",
+      "depth": 1,
+      "response_time_ms": 12315.4,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/mcp-geo-server-rag-readiness",
+      "status_code": 200,
+      "title": "MCP GEO Server: RAG Readiness",
+      "depth": 1,
+      "response_time_ms": 3881.9,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/geo-scope-reproducible-benchmark",
+      "status_code": 200,
+      "title": "GEO-Scope: AI Visibility Benchmark",
+      "depth": 1,
+      "response_time_ms": 3908.3,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/local-geo-iran-complete-guide",
+      "status_code": 200,
+      "title": "Local GEO: A Guide to Visibility in AI Search",
+      "depth": 1,
+      "response_time_ms": 18471.4,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/seo-ai-search-news-august-2026",
+      "status_code": 200,
+      "title": "SEO and AI Search: August 2026 Analysis",
+      "depth": 1,
+      "response_time_ms": 20527.6,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/laravel-ai-summary-provider-architecture",
+      "status_code": 200,
+      "title": "Designing a Provider-Agnostic AI Summary Layer for Laravel",
+      "depth": 1,
+      "response_time_ms": 5833.7,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/sage-audit-three-pillars",
+      "status_code": 200,
+      "title": "SAGE: SEO, AEO and GEO Audit Design",
+      "depth": 1,
+      "response_time_ms": 6136.8,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/agent-project-discovery-before-editing",
+      "status_code": 200,
+      "title": "Why Coding Agents Need Project Discovery Before They Edit",
+      "depth": 1,
+      "response_time_ms": 5882.7,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/research/sage-audit-open-source-engine",
+      "status_code": 200,
+      "title": "SAGE: Open-Source SEO, AEO and GEO Audit Engine",
+      "depth": 1,
+      "response_time_ms": 3737.1,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/research/vpa-rag-semantic-entropy",
+      "status_code": 200,
+      "title": "VPA: Vector Perturbation Architecture for RAG",
+      "depth": 1,
+      "response_time_ms": 3807.8,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/answerpath-geo-question-mining",
+      "status_code": 200,
+      "title": "AnswerPath GEO: Mining the Questions People Ask AI",
+      "depth": 1,
+      "response_time_ms": 3820.8,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/awesome-skills-directory-evaluation",
+      "status_code": 200,
+      "title": "How to Evaluate an AI Coding-Agent Skills Directory",
+      "depth": 1,
+      "response_time_ms": 4117.2,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/notes/lean-agent-skills-context-efficiency",
+      "status_code": 200,
+      "title": "Lean Agent Skills: Less Context, Same Quality",
+      "depth": 1,
+      "response_time_ms": 4150.3,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/research/digital-twin-what-is",
+      "status_code": 200,
+      "title": "What Is a Digital Twin? Architecture and Uses",
+      "depth": 1,
+      "response_time_ms": 11865.3,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/tr",
+      "status_code": 200,
+      "title": "SEO ve GEO Danışmanlığı | Taghi Molavi",
+      "depth": 1,
+      "response_time_ms": 11892.7,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/research/geo-pyramid",
+      "status_code": 200,
+      "title": "The Molavi GEO Pyramid: A Five-Layer Framework",
+      "depth": 1,
+      "response_time_ms": 12024.4,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/tr/notes",
+      "status_code": 200,
+      "title": "NOTLAR / GÜNLÜK | Taghi Molavi",
+      "depth": 1,
+      "response_time_ms": 12012.5,
+      "is_indexable": true
+    },
+    {
+      "url": "https://molavi.pro/research/geo-methods-and-techniques",
+      "status_code": 0,
+      "title": "",
+      "depth": 1,
+      "response_time_ms": 26315.2,
+      "is_indexable": false
+    },
+    {
+      "url": "https://molavi.pro/tr/research",
+      "status_code": 0,
+      "title": "",
+      "depth": 1,
+      "response_time_ms": 15004.1,
+      "is_indexable": false
+    },
+    {
+      "url": "https://molavi.pro/tr/proof",
+      "status_code": 0,
+      "title": "",
+      "depth": 1,
+      "response_time_ms": 15004.0,
+      "is_indexable": false
+    }
+  ]
+}

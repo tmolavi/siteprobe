@@ -121,6 +121,21 @@ SiteProbe serves as the **Autonomous Remediation & Verification Engine** for the
 
 See the [Benchmark Ecosystem Map](docs/BENCHMARK_ECOSYSTEM.md) for full architectural contracts.
 
+## 🏛️ Ecosystem
+
+SiteProbe operates as the autonomous remediation component of the **Molavi AI Visibility Stack**:
+
+- **Discovery**: [AnswerPath GEO](https://github.com/tmolavi/answerpath-geo)
+- **Measurement**: [GEO-Scope](https://github.com/tmolavi/geo-scope)
+- **Diagnostics**: [SAGE Audit](https://github.com/tmolavi/sage-audit)
+- **Action**: [SiteProbe](https://github.com/tmolavi/siteprobe)
+- **Protocol**: [MCP GEO Server](https://github.com/tmolavi/mcp-geo-server)
+
+## 📖 Sample Audit & Remediation Evidence
+
+- Audit Findings Payload: [`examples/audit_example.json`](examples/audit_example.json)
+- Verified Fix & Delta Payload: [`examples/fix_example.json`](examples/fix_example.json)
+
 ---
 
 ## 📊 Report Preview
