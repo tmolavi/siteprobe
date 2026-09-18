@@ -1,0 +1,23 @@
+{
+  "url": "https://example.local",
+  "status": "NEEDS_REMEDIATION",
+  "composite_score": 71.5,
+  "categories": {
+    "technical": {
+      "score": 85.0,
+      "issues": ["missing_canonical_link", "weak_cache_headers"]
+    },
+    "schema": {
+      "score": 50.0,
+      "issues": ["missing_organization_schema", "missing_faq_schema"]
+    },
+    "geo_readiness": {
+      "score": 60.0,
+      "issues": ["missing_llms_txt", "unstructured_passage_bounds"]
+    },
+    "accessibility": {
+      "score": 91.0,
+      "issues": []
+    }
+  }
+}

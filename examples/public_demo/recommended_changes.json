@@ -1,0 +1,31 @@
+{
+  "plan_id": "REMED-2026-001",
+  "target": "https://example.local",
+  "generated_at": "2026-09-18T00:00:00Z",
+  "patches": [
+    {
+      "id": "FIX-001",
+      "rule": "create_llms_txt",
+      "classification": "SAFE_AUTOFIX",
+      "target_file": "public/llms.txt",
+      "action": "CREATE",
+      "content": "# LLMs.txt for Example Local\n> Direct structured overview for LLM indexers\n\n## Main Services\n- Technical SEO\n- AI Search Optimization (GEO)\n"
+    },
+    {
+      "id": "FIX-002",
+      "rule": "inject_schema_markup",
+      "classification": "SAFE_AUTOFIX",
+      "target_file": "index.html",
+      "action": "INJECT_HEADER",
+      "content": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Example Local\",\"url\":\"https://example.local\"}</script>"
+    },
+    {
+      "id": "FIX-003",
+      "rule": "allow_ai_crawlers_robots_txt",
+      "classification": "SAFE_AUTOFIX",
+      "target_file": "public/robots.txt",
+      "action": "APPEND",
+      "content": "\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\n"
+    }
+  ]
+}

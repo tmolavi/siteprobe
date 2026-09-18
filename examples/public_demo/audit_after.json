@@ -1,0 +1,28 @@
+{
+  "url": "https://example.local",
+  "status": "VERIFIED_OPTIMIZED",
+  "composite_score": 94.2,
+  "categories": {
+    "technical": {
+      "score": 95.0,
+      "issues": []
+    },
+    "schema": {
+      "score": 92.0,
+      "issues": []
+    },
+    "geo_readiness": {
+      "score": 96.0,
+      "issues": []
+    },
+    "accessibility": {
+      "score": 94.0,
+      "issues": []
+    }
+  },
+  "delta": {
+    "score_improvement": "+22.7 points",
+    "fixed_issues": 6,
+    "remaining_issues": 0
+  }
+}
