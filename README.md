@@ -423,9 +423,14 @@ SiteProbe is engineered with defensive patterns:
 
 ---
 
-## 🤝 Contributing
+## 💬 Community & Contributing
 
 Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) and our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+
+- **Discussions**: [GitHub Discussions](https://github.com/tmolavi/siteprobe/discussions) across General, Ideas, Help, and Show & Tell.
+- **First Contribution Guide**: [`docs/FIRST_CONTRIBUTION.md`](docs/FIRST_CONTRIBUTION.md)
+- **Remediation & Safety Guide**: [`docs/remediation_guide.md`](docs/remediation_guide.md)
+- **Report Issues**: [GitHub Issues](https://github.com/tmolavi/siteprobe/issues)
 
 ```bash
 # Run test suite
