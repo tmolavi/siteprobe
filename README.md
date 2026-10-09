@@ -257,6 +257,19 @@ siteprobe fix ./my-audit/audit.json --repo /path/to/my-project
 siteprobe verify ./my-audit/audit.json --repo /path/to/my-project
 ```
 
+### Google Update Impact Triage
+SiteProbe provides a reproducible workflow for examining Search Console performance changes around Google's algorithm updates (e.g., September 2026 Google Spam Update). It distinguishes observed performance shifts, technical website errors, manual actions, and possible update correlations without over-claiming.
+
+```bash
+# Triage Search Console export against frozen rollout windows
+siteprobe update-triage --csv examples/update-impact/sample-input.csv
+
+# Output machine-readable JSON triage report
+siteprobe update-triage --csv examples/update-impact/sample-input.csv --output report.json
+```
+- [Methodology & Research Guide](docs/research/google-spam-update-september-2026.md)
+- [Reproduction Example & Synthetic Benchmark](examples/update-impact/README.md)
+
 ### System Diagnostics
 ```bash
 # Inspect environment and optional integration status

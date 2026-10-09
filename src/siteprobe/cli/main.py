@@ -6,6 +6,7 @@ from siteprobe.cli.verify import verify_command
 from siteprobe.cli.doctor import run_doctor
 from siteprobe.cli.integrations import run_integrations
 from siteprobe.cli.ssr import ssr_command
+from siteprobe.cli.update_triage import update_triage_command
 from siteprobe.mcp.server import run_mcp
 
 app = typer.Typer(
@@ -20,6 +21,7 @@ app.command(name="fix", help="Execute safe, deterministic code remediations")(fi
 app.command(name="verify", help="Verify applied fixes and re-evaluate findings")(verify_command)
 app.command(name="doctor", help="Inspect local environment capabilities and dependencies")(run_doctor)
 app.command(name="integrations", help="List external provider integrations and connection status")(run_integrations)
+app.command(name="update-triage", help="Triage Google Search Console impact around algorithm updates")(update_triage_command)
 app.command(name="serve-mcp", help="Launch Model Context Protocol (MCP) server over stdio")(run_mcp)
 
 

@@ -1,0 +1,322 @@
+{
+  "event": "September 2026 Google Spam Update",
+  "rollout_dates": {
+    "start": "2026-09-24",
+    "end": "2026-10-08"
+  },
+  "status": "PERFORMANCE_CHANGE_OBSERVED",
+  "diagnostic": "PERFORMANCE_CHANGE_OBSERVED",
+  "diagnostic_reason": "Observed Search Console performance decline (clicks: -34.2%, impressions: -29.5%) during rollout with no manual actions or blocking technical errors detected. Possible algorithm-update correlation.",
+  "pre_metrics": {
+    "window_name": "PRE",
+    "start_date": "2026-09-10",
+    "end_date": "2026-09-23",
+    "days_expected": 14,
+    "days_present": 14,
+    "is_complete": true,
+    "total_clicks": 5495,
+    "total_impressions": 109850,
+    "ctr": 0.050023,
+    "avg_position": 4.17,
+    "daily_breakdown": [
+      {
+        "date": "2026-09-10",
+        "clicks": 420,
+        "impressions": 8400,
+        "ctr": 0.05
+      },
+      {
+        "date": "2026-09-11",
+        "clicks": 410,
+        "impressions": 8200,
+        "ctr": 0.05
+      },
+      {
+        "date": "2026-09-12",
+        "clicks": 310,
+        "impressions": 6500,
+        "ctr": 0.0477
+      },
+      {
+        "date": "2026-09-13",
+        "clicks": 290,
+        "impressions": 6200,
+        "ctr": 0.0468
+      },
+      {
+        "date": "2026-09-14",
+        "clicks": 435,
+        "impressions": 8500,
+        "ctr": 0.0512
+      },
+      {
+        "date": "2026-09-15",
+        "clicks": 440,
+        "impressions": 8600,
+        "ctr": 0.0512
+      },
+      {
+        "date": "2026-09-16",
+        "clicks": 425,
+        "impressions": 8300,
+        "ctr": 0.0512
+      },
+      {
+        "date": "2026-09-17",
+        "clicks": 415,
+        "impressions": 8250,
+        "ctr": 0.0503
+      },
+      {
+        "date": "2026-09-18",
+        "clicks": 430,
+        "impressions": 8450,
+        "ctr": 0.0509
+      },
+      {
+        "date": "2026-09-19",
+        "clicks": 320,
+        "impressions": 6600,
+        "ctr": 0.0485
+      },
+      {
+        "date": "2026-09-20",
+        "clicks": 305,
+        "impressions": 6300,
+        "ctr": 0.0484
+      },
+      {
+        "date": "2026-09-21",
+        "clicks": 440,
+        "impressions": 8650,
+        "ctr": 0.0509
+      },
+      {
+        "date": "2026-09-22",
+        "clicks": 430,
+        "impressions": 8500,
+        "ctr": 0.0506
+      },
+      {
+        "date": "2026-09-23",
+        "clicks": 425,
+        "impressions": 8400,
+        "ctr": 0.0506
+      }
+    ]
+  },
+  "rollout_metrics": {
+    "window_name": "ROLLOUT",
+    "start_date": "2026-09-24",
+    "end_date": "2026-10-07",
+    "days_expected": 14,
+    "days_present": 14,
+    "is_complete": true,
+    "total_clicks": 3615,
+    "total_impressions": 77400,
+    "ctr": 0.046705,
+    "avg_position": 5.94,
+    "daily_breakdown": [
+      {
+        "date": "2026-09-24",
+        "clicks": 390,
+        "impressions": 7800,
+        "ctr": 0.05
+      },
+      {
+        "date": "2026-09-25",
+        "clicks": 350,
+        "impressions": 7100,
+        "ctr": 0.0493
+      },
+      {
+        "date": "2026-09-26",
+        "clicks": 240,
+        "impressions": 5200,
+        "ctr": 0.0462
+      },
+      {
+        "date": "2026-09-27",
+        "clicks": 220,
+        "impressions": 4900,
+        "ctr": 0.0449
+      },
+      {
+        "date": "2026-09-28",
+        "clicks": 290,
+        "impressions": 6000,
+        "ctr": 0.0483
+      },
+      {
+        "date": "2026-09-29",
+        "clicks": 280,
+        "impressions": 5900,
+        "ctr": 0.0475
+      },
+      {
+        "date": "2026-09-30",
+        "clicks": 270,
+        "impressions": 5800,
+        "ctr": 0.0466
+      },
+      {
+        "date": "2026-10-01",
+        "clicks": 260,
+        "impressions": 5600,
+        "ctr": 0.0464
+      },
+      {
+        "date": "2026-10-02",
+        "clicks": 250,
+        "impressions": 5500,
+        "ctr": 0.0455
+      },
+      {
+        "date": "2026-10-03",
+        "clicks": 190,
+        "impressions": 4200,
+        "ctr": 0.0452
+      },
+      {
+        "date": "2026-10-04",
+        "clicks": 180,
+        "impressions": 4100,
+        "ctr": 0.0439
+      },
+      {
+        "date": "2026-10-05",
+        "clicks": 240,
+        "impressions": 5200,
+        "ctr": 0.0462
+      },
+      {
+        "date": "2026-10-06",
+        "clicks": 230,
+        "impressions": 5100,
+        "ctr": 0.0451
+      },
+      {
+        "date": "2026-10-07",
+        "clicks": 225,
+        "impressions": 5000,
+        "ctr": 0.045
+      }
+    ]
+  },
+  "completion_day_metrics": {
+    "window_name": "COMPLETION",
+    "start_date": "2026-10-08",
+    "end_date": "2026-10-08",
+    "days_expected": 1,
+    "days_present": 1,
+    "is_complete": true,
+    "total_clicks": 220,
+    "total_impressions": 4900,
+    "ctr": 0.044898,
+    "avg_position": 7.3,
+    "daily_breakdown": [
+      {
+        "date": "2026-10-08",
+        "clicks": 220,
+        "impressions": 4900,
+        "ctr": 0.0449
+      }
+    ]
+  },
+  "post_metrics": {
+    "window_name": "POST",
+    "start_date": "2026-10-09",
+    "end_date": "2026-10-22",
+    "days_expected": 14,
+    "days_present": 1,
+    "is_complete": false,
+    "total_clicks": 215,
+    "total_impressions": 4850,
+    "ctr": 0.04433,
+    "avg_position": 7.4,
+    "daily_breakdown": [
+      {
+        "date": "2026-10-09",
+        "clicks": 215,
+        "impressions": 4850,
+        "ctr": 0.0443
+      }
+    ]
+  },
+  "click_change_percent": -34.21,
+  "impression_change_percent": -29.54,
+  "ctr_change_points": -0.3318,
+  "position_interpretation_note": "Average position changes must be evaluated alongside query impression composition. Shifts in query mix or lost long-tail impressions can artificially change average position even without algorithmic ranking demotions.",
+  "query_level_changes": [
+    {
+      "dimension": "query",
+      "value": "technical seo audit",
+      "pre_clicks": 5495,
+      "rollout_clicks": 3615,
+      "click_change": -1880,
+      "pre_impressions": 109850,
+      "rollout_impressions": 77400,
+      "impression_change": -32450,
+      "pre_position": 4.17,
+      "rollout_position": 5.94
+    }
+  ],
+  "page_level_changes": [
+    {
+      "dimension": "page",
+      "value": "https://example.com/audit",
+      "pre_clicks": 5495,
+      "rollout_clicks": 3615,
+      "click_change": -1880,
+      "pre_impressions": 109850,
+      "rollout_impressions": 77400,
+      "impression_change": -32450,
+      "pre_position": 4.17,
+      "rollout_position": 5.94
+    }
+  ],
+  "device_breakdown": {
+    "desktop": {
+      "pre_clicks": 4270,
+      "rollout_clicks": 2785,
+      "click_change_percent": -34.78,
+      "pre_impressions": 84250,
+      "rollout_impressions": 59000,
+      "pre_ctr": 0.0507,
+      "rollout_ctr": 0.0472
+    },
+    "mobile": {
+      "pre_clicks": 1225,
+      "rollout_clicks": 830,
+      "click_change_percent": -32.24,
+      "pre_impressions": 25600,
+      "rollout_impressions": 18400,
+      "pre_ctr": 0.0479,
+      "rollout_ctr": 0.0451
+    }
+  },
+  "country_breakdown": {
+    "usa": {
+      "pre_clicks": 5495,
+      "rollout_clicks": 3615,
+      "click_change_percent": -34.21,
+      "pre_impressions": 109850,
+      "rollout_impressions": 77400,
+      "pre_ctr": 0.05,
+      "rollout_ctr": 0.0467
+    }
+  },
+  "technical_audit": null,
+  "manual_action_reported": null,
+  "validation_warnings": [
+    "POST window is currently incomplete (1/14 days present). Post-update recovery cannot be reliably evaluated until all 14 days are recorded."
+  ],
+  "limitations": [
+    "Search Console data has an inherent 48-72 hour reporting delay.",
+    "Average position shifts must not be interpreted without query composition context.",
+    "Correlation with update rollout dates does not prove algorithm causation.",
+    "The POST-update window is incomplete as of 2026-10-09; no future observations are inferred.",
+    "SiteProbe cannot inspect Google's internal SpamBrain algorithms or manual review queues."
+  ],
+  "disclaimer": "SiteProbe provides a reproducible workflow for examining Search Console changes around Google's September 2026 spam update. Correlation does not prove causation. SiteProbe does not detect private Google spam classifiers or SpamBrain penalties, and does not label any site as spam."
+}
