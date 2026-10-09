@@ -1,4 +1,5 @@
 import datetime
+import math
 from collections import defaultdict
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -14,19 +15,12 @@ from siteprobe.updates.constants import (
     ROLLOUT_WINDOW_END,
     ROLLOUT_WINDOW_START,
 )
-from siteprobe.updates.models import DimensionDelta, GscDataRow, WindowMetrics
-
-
-def generate_date_range(start_str: str, end_str: str) -> List[datetime.date]:
-    """Generates all calendar dates between start and end inclusive."""
-    start = datetime.date.fromisoformat(start_str)
-    end = datetime.date.fromisoformat(end_str)
-    curr = start
-    dates = []
-    while curr <= end:
-        dates.append(curr)
-        curr += datetime.timedelta(days=1)
-    return dates
+from siteprobe.updates.models import (
+    BaselineVariability,
+    DimensionDelta,
+    GscDataRow,
+    WindowMetrics,
+)
 
 
 def compute_window_metrics(
@@ -49,7 +43,7 @@ def compute_window_metrics(
     total_clicks = sum(r.clicks for r in window_rows)
     total_impressions = sum(r.impressions for r in window_rows)
 
-    # Calculate CTR strictly from totals
+    # Calculate CTR strictly from totals; guard division by zero
     ctr = (total_clicks / total_impressions) if total_impressions > 0 else 0.0
 
     # Impression-weighted position calculation if available
@@ -81,6 +75,7 @@ def compute_window_metrics(
         })
 
     is_complete = len(distinct_dates) == expected_days
+    status = "COMPLETE" if is_complete else "INCOMPLETE"
 
     return WindowMetrics(
         window_name=window_name,
@@ -89,12 +84,88 @@ def compute_window_metrics(
         days_expected=expected_days,
         days_present=len(distinct_dates),
         is_complete=is_complete,
+        status=status,
         total_clicks=total_clicks,
         total_impressions=total_impressions,
         ctr=round(ctr, 6),
         avg_position=avg_position,
         daily_breakdown=daily_breakdown,
     )
+
+
+def compute_baseline_variability(pre_window: WindowMetrics) -> Optional[BaselineVariability]:
+    """
+    Computes site-specific daily baseline variability metrics (mean, std dev, CV)
+    using the unperturbed 14-day pre-update window. Avoids arbitrary global percentage assumptions.
+    """
+    daily = pre_window.daily_breakdown
+    if len(daily) < 7:
+        return None
+
+    clicks = [d["clicks"] for d in daily]
+    impressions = [d["impressions"] for d in daily]
+
+    n = len(daily)
+    mean_clicks = sum(clicks) / n
+    mean_imp = sum(impressions) / n
+
+    if mean_clicks > 0 and n > 1:
+        var_clicks = sum((c - mean_clicks) ** 2 for c in clicks) / (n - 1)
+        std_clicks = math.sqrt(var_clicks)
+        cv_clicks = round(std_clicks / mean_clicks, 4)
+    else:
+        std_clicks = 0.0
+        cv_clicks = None
+
+    if mean_imp > 0 and n > 1:
+        var_imp = sum((i - mean_imp) ** 2 for i in impressions) / (n - 1)
+        std_imp = math.sqrt(var_imp)
+        cv_imp = round(std_imp / mean_imp, 4)
+    else:
+        std_imp = 0.0
+        cv_imp = None
+
+    return BaselineVariability(
+        daily_clicks_mean=round(mean_clicks, 2),
+        daily_clicks_std=round(std_clicks, 2),
+        daily_clicks_cv=cv_clicks,
+        daily_impressions_mean=round(mean_imp, 2),
+        daily_impressions_std=round(std_imp, 2),
+        daily_impressions_cv=cv_imp,
+        baseline_period_days=n,
+    )
+
+
+def evaluate_change_significance(
+    click_change_pct: Optional[float],
+    imp_change_pct: Optional[float],
+    variability: Optional[BaselineVariability],
+) -> Tuple[str, Optional[str]]:
+    """
+    Evaluates whether an observed change exceeds the site's own baseline variability envelope.
+    Does NOT use an arbitrary universal +/-15% threshold.
+    """
+    if click_change_pct is None:
+        return "UNKNOWN", "No comparison change calculated."
+
+    if not variability or variability.daily_clicks_cv is None:
+        return "UNKNOWN", "Insufficient baseline daily variance to determine statistical envelope."
+
+    # Baseline envelope: at least 5% minimum floor or 2x coefficient of variation (95% spread)
+    envelope_pct = max(5.0, round(2.0 * variability.daily_clicks_cv * 100.0, 1))
+
+    if abs(click_change_pct) >= envelope_pct or (imp_change_pct and abs(imp_change_pct) >= envelope_pct):
+        return (
+            "SIGNIFICANT_RELATIVE_TO_BASELINE",
+            f"Observed click change ({click_change_pct:+.1f}%) exceeds the site's own baseline "
+            f"daily variance envelope (±{envelope_pct:.1f}% based on 2x CV).",
+        )
+    else:
+        return (
+            "WITHIN_BASELINE_VARIABILITY",
+            f"Observed click change ({click_change_pct:+.1f}%) falls within the site's own "
+            f"normal pre-update daily variance envelope (±{envelope_pct:.1f}%).",
+        )
 
 
 def compute_dimension_deltas(
@@ -150,7 +221,6 @@ def compute_dimension_deltas(
             rollout_position=round(roll_pos, 2) if roll_pos else None,
         ))
 
-    # Sort by absolute click change or total pre impressions
     deltas.sort(key=lambda x: (abs(x.click_change), x.pre_impressions), reverse=True)
     return deltas[:top_limit]
 
@@ -224,7 +294,6 @@ def analyze_windows(
             f"Post-update recovery cannot be reliably evaluated until all 14 days are recorded."
         )
 
-    # Comparisons are ONLY calculated if both PRE and ROLLOUT are complete
     click_change_pct = None
     imp_change_pct = None
     ctr_change_pts = None

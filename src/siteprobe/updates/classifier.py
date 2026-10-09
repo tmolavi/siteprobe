@@ -3,7 +3,7 @@ from typing import Optional, Tuple
 from siteprobe.updates.constants import (
     DIAGNOSTIC_INSUFFICIENT_DATA,
     DIAGNOSTIC_MANUAL_ACTION,
-    DIAGNOSTIC_NO_CHANGE,
+    DIAGNOSTIC_NO_CLEAR_CHANGE,
     DIAGNOSTIC_PERFORMANCE_CHANGE,
     DIAGNOSTIC_TECHNICAL_ISSUE,
     STATUS_DATA_UNAVAILABLE,
@@ -18,10 +18,12 @@ def classify_update_impact(
     imp_change_pct: Optional[float],
     technical_summary: Optional[TechnicalAuditSummary],
     manual_action_reported: Optional[bool] = None,
+    change_significance: str = "UNKNOWN",
+    change_significance_details: Optional[str] = None,
     data_unavailable: bool = False,
 ) -> Tuple[str, str, str]:
     """
-    Determines diagnostic classification based on empirical evidence.
+    Determines diagnostic classification based strictly on empirical evidence.
     
     Returns:
         (status, diagnostic, reason)
@@ -29,7 +31,8 @@ def classify_update_impact(
     Strict Rules:
     - Never infer a manual action from falling traffic. Must come from Search Console evidence.
     - Keep technical findings separate from algorithmic-update correlation.
-    - Never claim to detect Google's private spam classifier.
+    - Never claim to detect Google's private spam classifier or prove causality.
+    - Does NOT use an arbitrary universal +/-15% threshold; relies on site baseline variability.
     """
     if data_unavailable or pre_metrics is None or rollout_metrics is None:
         return (
@@ -53,7 +56,7 @@ def classify_update_impact(
             "PRE and ROLLOUT must each contain 14 complete days with matched weekdays.",
         )
 
-    # Check zero impressions
+    # Check zero impressions baseline
     if pre_metrics.total_impressions == 0 and rollout_metrics.total_impressions == 0:
         return (
             DIAGNOSTIC_INSUFFICIENT_DATA,
@@ -95,31 +98,50 @@ def classify_update_impact(
             "indexation, or rendering independently of any search engine algorithm update.",
         )
 
-    # Priority 3: Performance Change Observed (traffic drop or surge)
-    # Threshold: >= 15% change in clicks or impressions
-    if click_change_pct is not None and imp_change_pct is not None:
-        if click_change_pct <= -15.0 or imp_change_pct <= -15.0:
-            return (
-                DIAGNOSTIC_PERFORMANCE_CHANGE,
-                DIAGNOSTIC_PERFORMANCE_CHANGE,
-                f"Observed Search Console performance decline (clicks: {click_change_pct:+.1f}%, "
-                f"impressions: {imp_change_pct:+.1f}%) during rollout with no manual actions or blocking "
-                "technical errors detected. Possible algorithm-update correlation.",
-            )
-        elif click_change_pct >= 15.0 or imp_change_pct >= 15.0:
-            return (
-                DIAGNOSTIC_PERFORMANCE_CHANGE,
-                DIAGNOSTIC_PERFORMANCE_CHANGE,
-                f"Observed Search Console performance gain (clicks: {click_change_pct:+.1f}%, "
-                f"impressions: {imp_change_pct:+.1f}%) during rollout with no manual actions or blocking "
-                "technical errors detected. Possible algorithm-update correlation.",
-            )
+    # Priority 3: Statistically evaluated Performance Change
+    c_pct_str = f"{click_change_pct:+.1f}%" if click_change_pct is not None else "0.0%"
+    i_pct_str = f"{imp_change_pct:+.1f}%" if imp_change_pct is not None else "0.0%"
 
-    # Priority 4: No meaningful change
+    if change_significance == "SIGNIFICANT_RELATIVE_TO_BASELINE":
+        details = f" ({change_significance_details})" if change_significance_details else ""
+        if click_change_pct is not None and click_change_pct < 0:
+            return (
+                DIAGNOSTIC_PERFORMANCE_CHANGE,
+                DIAGNOSTIC_PERFORMANCE_CHANGE,
+                f"Observed Search Console performance decline (clicks: {c_pct_str}, impressions: {i_pct_str}) "
+                f"during rollout with no manual actions or blocking technical errors detected{details}. "
+                "Possible algorithm-update correlation. Causality is explicitly not claimed.",
+            )
+        else:
+            return (
+                DIAGNOSTIC_PERFORMANCE_CHANGE,
+                DIAGNOSTIC_PERFORMANCE_CHANGE,
+                f"Observed Search Console performance gain (clicks: {c_pct_str}, impressions: {i_pct_str}) "
+                f"during rollout with no manual actions or blocking technical errors detected{details}.",
+            )
+    elif change_significance == "WITHIN_BASELINE_VARIABILITY":
+        details = f" ({change_significance_details})" if change_significance_details else ""
+        return (
+            DIAGNOSTIC_NO_CLEAR_CHANGE,
+            DIAGNOSTIC_NO_CLEAR_CHANGE,
+            f"Search Console performance fluctuations (clicks: {c_pct_str}, impressions: {i_pct_str}) "
+            f"remain within the site's own pre-update baseline daily variability envelope{details}.",
+        )
+
+    # Priority 4: Fallback when baseline variability is UNKNOWN
+    # If a clear non-zero change exists, report observed change descriptively without claiming universal threshold
+    if click_change_pct is not None and abs(click_change_pct) > 0.0:
+        return (
+            DIAGNOSTIC_PERFORMANCE_CHANGE,
+            DIAGNOSTIC_PERFORMANCE_CHANGE,
+            f"A measurable performance change was observed during the defined comparison period "
+            f"(clicks: {c_pct_str}, impressions: {i_pct_str}). Baseline historical variability could not "
+            "be fully calculated. Possible update correlation; causality is not claimed.",
+        )
+
     return (
-        DIAGNOSTIC_NO_CHANGE,
-        DIAGNOSTIC_NO_CHANGE,
-        f"Search Console performance remained stable within normal variance "
-        f"(clicks: {click_change_pct:+.1f}% if click_change_pct else '0.0%', "
-        f"impressions: {imp_change_pct:+.1f}% if imp_change_pct else '0.0%') between PRE and ROLLOUT windows.",
+        DIAGNOSTIC_NO_CLEAR_CHANGE,
+        DIAGNOSTIC_NO_CLEAR_CHANGE,
+        f"Search Console performance remained unchanged between PRE and ROLLOUT windows "
+        f"(clicks: {c_pct_str}, impressions: {i_pct_str}).",
     )

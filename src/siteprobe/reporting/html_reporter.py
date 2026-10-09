@@ -77,7 +77,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         <p style="color: var(--text-dim); font-size: 0.9rem;">Target: <strong style="color: var(--heading);">{{ site_url }}</strong> | Scanned at {{ timestamp }}</p>
       </div>
       <div>
-        <span class="badge badge-fix">Engine v0.1.0</span>
+        <span class="badge badge-fix">Engine v0.2.0</span>
         <span class="badge badge-low">Audit Mode</span>
       </div>
     </header>

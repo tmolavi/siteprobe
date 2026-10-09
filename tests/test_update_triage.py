@@ -242,3 +242,31 @@ def test_cli_update_triage_no_data():
     res = runner.invoke(app, ["update-triage", "--json"])
     assert res.exit_code == 0
     assert "DATA_UNAVAILABLE" in res.output
+
+
+# 11. No clear change observed (within site-specific baseline variability)
+def test_no_clear_change_within_baseline():
+    # Only 1% fluctuation (100 clicks -> 99 clicks)
+    csv_data = build_synthetic_csv(
+        pre_days=14, rollout_days=14, pre_clicks=100, rollout_clicks=99, pre_imp=2000, rollout_imp=1980
+    )
+    triage = UpdateImpactTriage(csv_source=io.StringIO(csv_data))
+    result = triage.run()
+
+    assert result.diagnostic in (DIAGNOSTIC_NO_CHANGE, "NO_CLEAR_CHANGE_OBSERVED")
+    assert result.diagnostic_classification == result.diagnostic
+    assert result.metrics.change_significance == "WITHIN_BASELINE_VARIABILITY"
+
+
+# 12. Baseline variability calculation
+def test_baseline_variability_model():
+    csv_data = build_synthetic_csv(
+        pre_days=14, rollout_days=14, pre_clicks=100, rollout_clicks=50, pre_imp=2000, rollout_imp=1000
+    )
+    triage = UpdateImpactTriage(csv_source=io.StringIO(csv_data))
+    result = triage.run()
+
+    assert result.metrics.baseline_variability is not None
+    assert result.metrics.baseline_variability.daily_clicks_mean == 100.0
+    assert result.metrics.change_significance == "SIGNIFICANT_RELATIVE_TO_BASELINE"
+

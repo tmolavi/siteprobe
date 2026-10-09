@@ -26,11 +26,7 @@ def parse_non_negative_int(val: str, field_name: str, row_idx: int) -> int:
     if val == "":
         raise ValueError(f"Row {row_idx}: Missing required '{field_name}' value.")
     try:
-        # Support string floats representing ints like '10.0'
         num = float(val)
-        if not num.is_integer() and field_name in ("clicks", "impressions"):
-            # Some platforms export floats for impressions/clicks, round or check
-            pass
         int_val = int(round(num))
         if int_val < 0:
             raise ValueError(f"Row {row_idx}: '{field_name}' cannot be negative ({val}).")
@@ -114,6 +110,10 @@ def validate_and_parse_gsc_csv(
     if not content.strip():
         raise ValueError("CSV source is empty.")
 
+    # Check for synthetic benchmark notice
+    if "SYNTHETIC" in content.upper():
+        warnings.append("Input dataset is marked SYNTHETIC benchmark data. Results do not represent real website traffic.")
+
     # Strip comment lines (e.g. # SYNTHETIC DATASET NOTICE)
     clean_lines = [line for line in content.splitlines() if not line.strip().startswith("#")]
     if not clean_lines or not any(l.strip() for l in clean_lines):
@@ -129,7 +129,6 @@ def validate_and_parse_gsc_csv(
     header_map: Dict[str, int] = {}
     for idx, h in enumerate(raw_headers):
         norm = h.strip().lower()
-        # Handle common BOM or formatting quirks
         norm = norm.replace("\ufeff", "")
         if norm:
             header_map[norm] = idx
