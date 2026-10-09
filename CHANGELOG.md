@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-10-09
+
+### Added
+- **Google Algorithm Update Impact Triage (`update-triage`)**: Deterministic triage utility to evaluate Google Search Console performance shifts around algorithm updates (specifically the September 2026 Google Spam Update).
+- **Frozen Comparison Windows**: Strict 14-day matched-weekday comparison methodology (`PRE`: 2026-09-10 to 2026-09-23, `ROLLOUT`: 2026-09-24 to 2026-10-07) with isolated completion day (2026-10-08) and guarded incomplete `POST` window.
+- **Defensive GSC Data Validation**: Validates date formats, types, prevents impossible data (clicks > impressions), composite duplicate row detection, and never generates fake observations.
+- **5 Empirical Diagnostic Classifications**: `NO_MEANINGFUL_CHANGE_OBSERVED`, `PERFORMANCE_CHANGE_OBSERVED`, `TECHNICAL_ISSUE_OBSERVED`, `MANUAL_ACTION_REPORTED`, and `INSUFFICIENT_DATA`.
+- **Methodological Research Guide**: Documented in `docs/research/google-spam-update-september-2026.md`.
+- **Synthetic Benchmark Dataset & Reproduction**: Complete reproducible example in `examples/update-impact/`.
+- **Agent Skill Update**: Upgraded canonical agent skill `siteprobe` to v0.2.0 with update notification requirement.
+
 ## [0.1.1] - 2026-09-16
 
 ### Added

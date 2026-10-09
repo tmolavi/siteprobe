@@ -73,6 +73,7 @@ It doesn't just find a missing canonical tag, an unlabelled accessibility input,
 | **Multi-format Reporting** | **WORKING** | Verified (Unit & Live) | Single-file zero-CDN HTML dashboard, structured JSON (`audit.json`), Markdown. |
 | **Multilingual (i18n)** | **WORKING** | Verified (Unit & Live) | Native translations for English (`en`), Persian (`fa`), and Turkish (`tr`). |
 | **MCP Server** | **WORKING** | Verified (Unit & Live) | FastMCP server exposing 14 tools (`start_audit`, `get_findings`, `apply_safe_fixes`). |
+| **Google Update Triage** | **WORKING** | Verified (Unit & Benchmark) | Frozen-window comparison, GSC CSV triage, technical issue vs. algorithm correlation. |
 | **Lighthouse CLI** | **OPTIONAL** | Tested | Lab Core Web Vitals runner via local Node.js / `lighthouse` or `npx`. |
 | **Playwright Automation** | **OPTIONAL** | Tested | Headless browser for SPA rendering (requires `pip install siteprobe[browser]`). |
 | **Google Search Console** | **OPTIONAL** | Scaffolded | Adapter ready; requires `GOOGLE_APPLICATION_CREDENTIALS` (never simulated). |
@@ -399,6 +400,7 @@ siteprobe/
 │   ├── remediation/  # Risk-classified planner, atomic file handlers, snapshot/rollback
 │   ├── verification/ # Post-fix verification engine
 │   ├── reporting/    # Interactive HTML dashboard, JSON, and Markdown reporters
+│   ├── updates/      # Google algorithm update triage engine & frozen windows
 │   ├── i18n/         # Locales (English, Persian, Turkish) and translation engine
 │   ├── models/       # Pydantic data schemas
 │   └── mcp/          # FastMCP / Standard MCP server
@@ -430,6 +432,7 @@ SiteProbe is engineered with defensive patterns:
 - [x] v0.1.0: Standalone interactive HTML reporting
 - [x] v0.1.0: Multilingual support (en, fa, tr)
 - [x] v0.1.0: FastMCP server & Agent Skill specification
+- [x] v0.2.0: Evidence-based Google Update Impact Triage (September 2026 Spam Update)
 - [ ] v0.2.0: Deep JS rendering via distributed Playwright cluster
 - [ ] v0.2.0: Automated GitHub Pull Request creation CLI command (`siteprobe pr`)
 - [ ] v0.3.0: Native headless CMS plugins for WordPress and Shopify API-based auto-remediation
