@@ -1,11 +1,11 @@
 ---
 name: siteprobe
-description: "Autonomous website auditor & fixer for SEO, GEO/AEO, Core Web Vitals, accessibility, and web quality."
+description: "Autonomous website auditor, fixer & algorithm update impact triage for SEO, GEO/AEO, Core Web Vitals, and web quality."
 category: seo
 risk: low
 source: official
 author: Taqi Molavi
-version: "0.1.1"
+version: "0.2.0"
 triggers:
   - "audit my website"
   - "SEO audit"
@@ -22,18 +22,31 @@ triggers:
   - "fix indexing"
   - "analyze Search Console and fix problems"
   - "inspect website and implement fixes"
+  - "Google update impact triage"
+  - "Google spam update triage"
+  - "September 2026 Google Spam Update triage"
+  - "siteprobe update-triage"
   - "سئو سایتم رو بررسی کن"
   - "بررسی سئو سایت"
   - "تست SSR"
   - "بررسی رندرینگ سایت"
   - "بهینه‌سازی سئو و رتبه هوش مصنوعی"
+  - "بررسی افت رتبه در آپدیت گوگل"
+  - "تحلیل افت ورودی سرچ کنسول"
+  - "تریاژ آپدیت الگوریتم گوگل"
+  - "ترافیک سایتم بعد از آپدیت گوگل ریخته"
 ---
 
-# SiteProbe: Autonomous Website Auditor & Fixer
+# SiteProbe: Autonomous Website Auditor, Fixer & Algorithm Update Impact Triage
 
-SiteProbe follows a strict six-step operational lifecycle:
+> [!IMPORTANT]
+> **📢 پیام بررسی و الزام بروزرسانی اسکیل (Update Notification):**  
+> هر عاملی (Agent) که این اسکیل را اجرا می‌کند، موظف است در صورتی که نسخه اسکیل کمتر از `v0.2.0` باشد، پیام زیر را به کاربر نمایش دهد:  
+> *"📢 نسخه جدید اسکیل SiteProbe (v0.2.0 با ماژول رسمی تریاژ آپدیت‌های گوگل) منتشر شده است. لطفاً مخزن `siteprobe` را پول (Pull) کرده و اسکیل را با اجرای دستورات زیر بروزرسانی نمایید: `cp -r /path/to/siteprobe/skills/siteprobe ~/.gemini/config/skills/`"*
 
-**Audit → Evidence → Plan → Fix → Verify → Report**
+SiteProbe follows a strict multi-phase operational lifecycle:
+
+**Audit → Evidence → Plan → Fix → Verify → Triage → Report**
 
 SiteProbe bridges diagnosis with remediation. It never claims an issue is fixed unless post-change verification passes, and never fabricates analytics, search, or ranking metrics.
 
@@ -41,7 +54,7 @@ SiteProbe bridges diagnosis with remediation. It never claims an issue is fixed 
 
 ## ⚡ Operational Workflow for AI Coding Agents
 
-When invoked by a user to audit, inspect, or fix a website, follow these structured phases:
+When invoked by a user to audit, inspect, fix, or triage an algorithm update impact, follow these structured phases:
 
 ```mermaid
 flowchart LR
@@ -50,7 +63,8 @@ flowchart LR
     C --> D["Phase D: Report Audit"]
     D --> E["Phase E: Safe Remediation"]
     E --> F["Phase F: Verification"]
-    F --> G["Phase G: Final Summary"]
+    F --> G["Phase G: Update Triage"]
+    G --> H["Phase H: Final Summary"]
 ```
 
 ---
@@ -144,10 +158,46 @@ Statuses reported:
 
 ---
 
-### Phase G: Final Evidence Report
+### Phase G: Google Update Impact Triage (`update-triage`)
+
+When a user inquires about sudden traffic declines during or following a Google algorithm update (such as the **September 2026 Google Spam Update**, rolled out from `2026-09-24` to `2026-10-08`), use the dedicated triage engine:
+
+```bash
+siteprobe update-triage \
+  --csv path/to/gsc-export.csv \
+  --audit-file ./siteprobe-report/audit.json \
+  --output ./triage-report.json
+```
+
+#### 1. Frozen Comparison Windows
+- **PRE (`2026-09-10` to `2026-09-23`)**: 14 days, Thursday through Wednesday. Baseline.
+- **ROLLOUT (`2026-09-24` to `2026-10-07`)**: 14 days, matched weekdays. Rollout window.
+- **COMPLETION (`2026-10-08`)**: 1 day isolated milestone.
+- **POST (`2026-10-09` to `2026-10-22`)**: Incomplete window. *Never compare incomplete periods against complete baselines.*
+
+#### 2. Diagnostic Classifications
+SiteProbe assigns one of five evidence-backed observations:
+1. `NO_MEANINGFUL_CHANGE_OBSERVED`: Traffic remained within normal variance (±15%).
+2. `PERFORMANCE_CHANGE_OBSERVED`: Meaningful performance drop (≥15%) during rollout without technical or manual penalties. Indicates potential update correlation.
+3. `TECHNICAL_ISSUE_OBSERVED`: Identified blocking server/indexability errors (HTTP 5xx, sitewide noindex, robots disallow, canonical conflicts, SSR empty SPA shells).
+4. `MANUAL_ACTION_REPORTED`: Search Console explicitly documented a human-reviewed penalty. (Never inferred from traffic drops).
+5. `INSUFFICIENT_DATA`: Missing dates, zero impressions, or unavailable Search Console export.
+
+#### 3. Strict Methodological Boundaries
+- **Allowed Claim**: *"SiteProbe provides a reproducible workflow for examining Search Console changes around Google's September 2026 spam update."*
+- **Forbidden Claims**:
+  - *"SiteProbe detects Google penalties."*
+  - *"SiteProbe identifies SpamBrain violations."*
+  - *"SiteProbe proves the update caused a traffic loss."*
+- SiteProbe never labels any website as spam.
+
+---
+
+### Phase H: Final Summary
 Conclude with a clear summary:
 * Fixed issues with code diffs.
 * Verification status with before/after evidence.
+* Update triage diagnostic findings and recommended actions.
 * Remaining manual action items with instructions.
 
 ---
@@ -161,12 +211,12 @@ siteprobe audit https://example.com
 # Inspect SSR / CSR hydration & raw SEO tags
 siteprobe ssr https://example.com
 
+# Google Algorithm Update Impact Triage
+siteprobe update-triage --csv ./gsc_performance.csv --audit-file ./audit.json
+
 # Persian or Turkish language audit
 siteprobe audit https://example.com --lang fa
 siteprobe audit https://example.com --lang tr
-
-# Audit with specific page cap and output directory
-siteprobe audit https://example.com --max-pages 200 --output ./audit-results
 
 # Safe automatic fixes
 siteprobe fix ./audit-results/audit.json --repo .
