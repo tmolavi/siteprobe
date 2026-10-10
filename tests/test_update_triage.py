@@ -450,12 +450,14 @@ def test_regression_synthetic_data_disclosure(tmp_path):
 
 # 10. Existing CLI backward compatibility
 def test_regression_cli_backward_compatibility():
+    import re
     # Help flag
-    res_help = runner.invoke(app, ["update-triage", "--help"])
+    res_help = runner.invoke(app, ["update-triage", "--help"], color=False)
     assert res_help.exit_code == 0
-    assert "--csv" in res_help.output
-    assert "--audit-file" in res_help.output
-    assert "--manual-action" in res_help.output
-    assert "--output" in res_help.output
-    assert "--json" in res_help.output
+    clean_help = re.sub(r"\x1b\[[0-9;]*[a-zA-Z]", "", res_help.output)
+    assert "--csv" in clean_help
+    assert "--audit-file" in clean_help
+    assert "--manual-action" in clean_help
+    assert "--output" in clean_help
+    assert "--json" in clean_help
 
