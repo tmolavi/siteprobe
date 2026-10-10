@@ -270,8 +270,8 @@ SiteProbe provides an evidence-based, reproducible workflow for examining Google
 
 ### 🎯 Objective: Distinguishing 5 Diagnostic States
 Rather than guessing or blaming Google updates arbitrarily, SiteProbe strictly classifies observations into one of 5 defensible states:
-1. `NO_CLEAR_CHANGE_OBSERVED`: Observed fluctuations remain within the site's own daily baseline variance envelope ($2 \times \text{CV}$).
-2. `PERFORMANCE_CHANGE_OBSERVED`: Statistically meaningful traffic decline occurred during update rollout with no manual actions or blocking technical errors.
+1. `NO_CLEAR_CHANGE_OBSERVED`: Observed fluctuations remain within the site's heuristic baseline daily variability envelope ($\max(5\%, 2 \times \text{CV})$).
+2. `PERFORMANCE_CHANGE_OBSERVED`: Performance change observed during update rollout exceeding the site's heuristic baseline variability envelope with no manual actions or blocking technical errors (possible update correlation; causality is explicitly not claimed; statistical significance is UNKNOWN).
 3. `TECHNICAL_ISSUE_OBSERVED`: Severe technical defects (HTTP 5xx, noindex, broken canonicals, or robots.txt blocks) explain ranking or traffic drop independently.
 4. `MANUAL_ACTION_REPORTED`: Explicit Search Console manual action notice confirmed (never inferred from traffic decline).
 5. `INSUFFICIENT_DATA` / `DATA_UNAVAILABLE`: Incomplete comparison windows or missing Search Console export.

@@ -21,6 +21,7 @@ def classify_update_impact(
     change_significance: str = "UNKNOWN",
     change_significance_details: Optional[str] = None,
     data_unavailable: bool = False,
+    exceeds_heuristic_envelope: Optional[bool] = None,
 ) -> Tuple[str, str, str]:
     """
     Determines diagnostic classification based strictly on empirical evidence.
@@ -33,13 +34,14 @@ def classify_update_impact(
     - Keep technical findings separate from algorithmic-update correlation.
     - Never claim to detect Google's private spam classifier or prove causality.
     - Does NOT use an arbitrary universal +/-15% threshold; relies on site baseline variability.
+    - Keep observed performance changes separate from statistical significance.
     """
     if data_unavailable or pre_metrics is None or rollout_metrics is None:
         return (
             STATUS_DATA_UNAVAILABLE,
             DIAGNOSTIC_INSUFFICIENT_DATA,
-            "Search Console performance data is unavailable. Neither active GSC API credentials "
-            "nor a valid user-supplied CSV export was provided.",
+            "Search Console performance data is unavailable. No valid user-supplied Search Console "
+            "CSV export was provided (update triage currently supports CSV input).",
         )
 
     # Check comparison period completeness
@@ -98,12 +100,23 @@ def classify_update_impact(
             "indexation, or rendering independently of any search engine algorithm update.",
         )
 
-    # Priority 3: Statistically evaluated Performance Change
+    # Priority 3: Performance Change vs No Clear Change
     c_pct_str = f"{click_change_pct:+.1f}%" if click_change_pct is not None else "0.0%"
     i_pct_str = f"{imp_change_pct:+.1f}%" if imp_change_pct is not None else "0.0%"
+    details = f" ({change_significance_details})" if change_significance_details else ""
 
-    if change_significance == "SIGNIFICANT_RELATIVE_TO_BASELINE":
-        details = f" ({change_significance_details})" if change_significance_details else ""
+    is_exceeding = (
+        exceeds_heuristic_envelope is True
+        or change_significance == "SIGNIFICANT_RELATIVE_TO_BASELINE"
+        or (exceeds_heuristic_envelope is None and change_significance_details is not None and "exceeds" in change_significance_details)
+    )
+    is_within = (
+        exceeds_heuristic_envelope is False
+        or change_significance == "WITHIN_BASELINE_VARIABILITY"
+        or (exceeds_heuristic_envelope is None and change_significance_details is not None and "falls within" in change_significance_details)
+    )
+
+    if is_exceeding:
         if click_change_pct is not None and click_change_pct < 0:
             return (
                 DIAGNOSTIC_PERFORMANCE_CHANGE,
@@ -119,13 +132,12 @@ def classify_update_impact(
                 f"Observed Search Console performance gain (clicks: {c_pct_str}, impressions: {i_pct_str}) "
                 f"during rollout with no manual actions or blocking technical errors detected{details}.",
             )
-    elif change_significance == "WITHIN_BASELINE_VARIABILITY":
-        details = f" ({change_significance_details})" if change_significance_details else ""
+    elif is_within:
         return (
             DIAGNOSTIC_NO_CLEAR_CHANGE,
             DIAGNOSTIC_NO_CLEAR_CHANGE,
-            f"Search Console performance fluctuations (clicks: {c_pct_str}, impressions: {i_pct_str}) "
-            f"remain within the site's own pre-update baseline daily variability envelope{details}.",
+            f"Search Console performance delta (clicks: {c_pct_str}, impressions: {i_pct_str}) "
+            f"falls within the site's heuristic baseline daily variability envelope{details}.",
         )
 
     # Priority 4: Fallback when baseline variability is UNKNOWN

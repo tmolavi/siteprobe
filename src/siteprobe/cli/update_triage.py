@@ -78,6 +78,14 @@ def update_triage_command(
     )
     result = triage.run()
 
+    # Save output if requested
+    if output:
+        out_p = Path(output)
+        out_p.parent.mkdir(parents=True, exist_ok=True)
+        out_p.write_text(result.model_dump_json(indent=2), encoding="utf-8")
+        if not json_output:
+            console.print(f"\n[bold green]Report saved to:[/bold green] {out_p}")
+
     # If raw JSON requested
     if json_output:
         typer.echo(result.model_dump_json(indent=2))
@@ -166,10 +174,3 @@ def update_triage_command(
 
     # Disclaimer
     console.print(Panel(result.disclaimer, title="Scientific & Methodological Notice", style="dim"))
-
-    # Save output if requested
-    if output:
-        out_p = Path(output)
-        out_p.parent.mkdir(parents=True, exist_ok=True)
-        out_p.write_text(result.model_dump_json(indent=2), encoding="utf-8")
-        console.print(f"\n[bold green]Report saved to:[/bold green] {out_p}")

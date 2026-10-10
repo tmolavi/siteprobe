@@ -50,8 +50,8 @@ siteprobe update-triage \
 
 SiteProbe classifies audit outcomes into one of five mutually exclusive empirical categories:
 
-1. `NO_MEANINGFUL_CHANGE_OBSERVED`: Performance metrics stayed within standard variance (±15%).
-2. `PERFORMANCE_CHANGE_OBSERVED`: Statistically significant performance decline or shift observed during rollout, with no manual action or technical errors detected.
+1. `NO_CLEAR_CHANGE_OBSERVED`: Performance metrics stayed within the site's heuristic baseline daily variability envelope; no clear performance shift detected.
+2. `PERFORMANCE_CHANGE_OBSERVED`: Performance change observed during rollout exceeding the site's heuristic baseline variability envelope, with no manual action or technical errors detected. Possible update correlation; causality is not claimed.
 3. `TECHNICAL_ISSUE_OBSERVED`: Technical website errors (HTTP 5xx, sitewide noindex, robots.txt blocks, SSR empty shell, canonical loops) explain traffic declines independently of algorithm changes.
 4. `MANUAL_ACTION_REPORTED`: Search Console explicitly documented a human-reviewed manual action on the property.
 5. `INSUFFICIENT_DATA`: Comparison windows have missing dates, zero impressions, or no Search Console export was provided.

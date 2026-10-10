@@ -182,8 +182,8 @@ siteprobe update-triage \
 
 #### 2. Diagnostic Classifications
 SiteProbe assigns one of five evidence-backed observations:
-1. `NO_MEANINGFUL_CHANGE_OBSERVED`: Traffic remained within normal variance (±15%).
-2. `PERFORMANCE_CHANGE_OBSERVED`: Meaningful performance drop (≥15%) during rollout without technical or manual penalties. Indicates potential update correlation.
+1. `NO_CLEAR_CHANGE_OBSERVED`: Traffic remained within the site's heuristic baseline daily variability envelope (max(5%, 2 × daily CV)).
+2. `PERFORMANCE_CHANGE_OBSERVED`: Performance change observed during rollout exceeding the site's heuristic baseline envelope without technical or manual issues. Indicates potential update correlation; causality not claimed; statistical significance is UNKNOWN.
 3. `TECHNICAL_ISSUE_OBSERVED`: Identified blocking server/indexability errors (HTTP 5xx, sitewide noindex, robots disallow, canonical conflicts, SSR empty SPA shells).
 4. `MANUAL_ACTION_REPORTED`: Search Console explicitly documented a human-reviewed penalty. (Never inferred from traffic drops).
 5. `INSUFFICIENT_DATA`: Missing dates, zero impressions, or unavailable Search Console export.

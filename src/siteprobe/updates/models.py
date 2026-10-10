@@ -107,7 +107,7 @@ class MetricsContainer(BaseModel):
     impression_change_percent: Optional[float] = None
     ctr_change: Optional[float] = None
     baseline_variability: Optional[BaselineVariability] = None
-    change_significance: str = "UNKNOWN"  # "SIGNIFICANT_RELATIVE_TO_BASELINE", "WITHIN_BASELINE_VARIABILITY", "UNKNOWN"
+    change_significance: str = "UNKNOWN"  # Statistical significance: "UNKNOWN" (heuristic envelope is not a formal significance test)
     change_significance_details: Optional[str] = None
     position_interpretation_note: Optional[str] = None
 

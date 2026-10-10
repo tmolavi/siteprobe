@@ -16,6 +16,7 @@ from siteprobe.updates.constants import (
 )
 from siteprobe.updates.metrics import (
     analyze_windows,
+    check_exceeds_heuristic_envelope,
     compute_baseline_variability,
     compute_categorical_breakdown,
     compute_dimension_deltas,
@@ -82,7 +83,10 @@ class UpdateImpactTriage:
             if any("SYNTHETIC" in w for w in parse_warns):
                 data_type = "SYNTHETIC"
         elif self.gsc_integration.is_available():
-            warnings.append("GSC API credentials configured, but historical window CSV is preferred for freeze analysis.")
+            warnings.append(
+                "GSC API credentials configured, but automated GSC API retrieval for frozen window triage "
+                "is not supported; a CSV export must be provided."
+            )
             rows = None
         else:
             rows = None
@@ -127,6 +131,7 @@ class UpdateImpactTriage:
         # 3. Compute Site-Specific Baseline Variability (PRE window)
         baseline_var = compute_baseline_variability(pre)
         significance, sig_details = evaluate_change_significance(click_pct, imp_pct, baseline_var)
+        exceeds_envelope = check_exceeds_heuristic_envelope(click_pct, imp_pct, baseline_var)
 
         # 4. Dimensional Analysis (Optional dimensions)
         has_queries = any(r.query for r in rows)
@@ -164,6 +169,7 @@ class UpdateImpactTriage:
             manual_action_reported=self.manual_action_reported,
             change_significance=significance,
             change_significance_details=sig_details,
+            exceeds_heuristic_envelope=exceeds_envelope,
         )
 
         missing_dates = []

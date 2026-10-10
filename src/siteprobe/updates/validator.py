@@ -21,18 +21,22 @@ def parse_date(val: str, row_idx: int) -> datetime.date:
 
 
 def parse_non_negative_int(val: str, field_name: str, row_idx: int) -> int:
-    """Parses and validates a non-negative integer."""
+    """Parses and validates a non-negative integer. Rejects fractional values rather than rounding."""
     val = val.strip()
     if val == "":
         raise ValueError(f"Row {row_idx}: Missing required '{field_name}' value.")
     try:
         num = float(val)
-        int_val = int(round(num))
+        if not num.is_integer():
+            raise ValueError(
+                f"Row {row_idx}: '{field_name}' must be an integer, got fractional value '{val}'."
+            )
+        int_val = int(num)
         if int_val < 0:
             raise ValueError(f"Row {row_idx}: '{field_name}' cannot be negative ({val}).")
         return int_val
-    except Exception as e:
-        if "cannot be negative" in str(e):
+    except ValueError as e:
+        if "cannot be negative" in str(e) or "must be an integer" in str(e) or "Missing required" in str(e):
             raise
         raise ValueError(f"Row {row_idx}: Invalid integer for '{field_name}': '{val}'.")
 

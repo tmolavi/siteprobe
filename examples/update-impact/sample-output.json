@@ -269,8 +269,8 @@
       "daily_impressions_cv": 0.1225,
       "baseline_period_days": 14
     },
-    "change_significance": "SIGNIFICANT_RELATIVE_TO_BASELINE",
-    "change_significance_details": "Observed click change (-34.2%) exceeds the site's own baseline daily variance envelope (±29.3% based on 2x CV).",
+    "change_significance": "UNKNOWN",
+    "change_significance_details": "Observed click change (-34.2%) exceeds the site's heuristic baseline daily variability envelope (±29.3% based on 2x CV). This envelope is an informal heuristic, not a formal statistical significance test; statistical significance is UNKNOWN.",
     "position_interpretation_note": "Average position changes must be evaluated alongside query impression composition. Shifts in query mix or lost long-tail impressions can artificially change average position even without algorithmic ranking demotions."
   },
   "technical_findings": [],
@@ -278,7 +278,7 @@
   "classification": "PERFORMANCE_CHANGE_OBSERVED",
   "diagnostic_classification": "PERFORMANCE_CHANGE_OBSERVED",
   "diagnostic": "PERFORMANCE_CHANGE_OBSERVED",
-  "diagnostic_reason": "Observed Search Console performance decline (clicks: -34.2%, impressions: -29.5%) during rollout with no manual actions or blocking technical errors detected (Observed click change (-34.2%) exceeds the site's own baseline daily variance envelope (±29.3% based on 2x CV).). Possible algorithm-update correlation. Causality is explicitly not claimed.",
+  "diagnostic_reason": "Observed Search Console performance decline (clicks: -34.2%, impressions: -29.5%) during rollout with no manual actions or blocking technical errors detected (Observed click change (-34.2%) exceeds the site's heuristic baseline daily variability envelope (±29.3% based on 2x CV). This envelope is an informal heuristic, not a formal statistical significance test; statistical significance is UNKNOWN.). Possible algorithm-update correlation. Causality is explicitly not claimed.",
   "status": "PERFORMANCE_CHANGE_OBSERVED",
   "pre_metrics": {
     "window_name": "PRE",

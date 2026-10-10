@@ -255,7 +255,8 @@ def test_no_clear_change_within_baseline():
 
     assert result.diagnostic in (DIAGNOSTIC_NO_CHANGE, "NO_CLEAR_CHANGE_OBSERVED")
     assert result.diagnostic_classification == result.diagnostic
-    assert result.metrics.change_significance == "WITHIN_BASELINE_VARIABILITY"
+    assert result.metrics.change_significance == "UNKNOWN"
+    assert "falls within the site's heuristic baseline daily variability envelope" in result.metrics.change_significance_details
 
 
 # 12. Baseline variability calculation
@@ -268,5 +269,193 @@ def test_baseline_variability_model():
 
     assert result.metrics.baseline_variability is not None
     assert result.metrics.baseline_variability.daily_clicks_mean == 100.0
-    assert result.metrics.change_significance == "SIGNIFICANT_RELATIVE_TO_BASELINE"
+    assert result.metrics.change_significance == "UNKNOWN"
+    assert "exceeds the site's heuristic baseline daily variability envelope" in result.metrics.change_significance_details
+
+
+# ==============================================================================
+# REGRESSION SUITE: Scientific Integrity & Methodology Verification (TASK 8)
+# ==============================================================================
+
+# 1. Documentation / classification consistency
+def test_regression_documentation_classification_consistency():
+    from pathlib import Path
+    doc_path = Path("docs/research/google-spam-update-september-2026.md")
+    readme_path = Path("examples/update-impact/README.md")
+
+    assert doc_path.exists()
+    assert readme_path.exists()
+
+    doc_text = doc_path.read_text(encoding="utf-8")
+    readme_text = readme_path.read_text(encoding="utf-8")
+
+    # Outdated universal ±15% claims must be absent
+    assert "normal variance (±15%)" not in doc_text
+    assert "standard variance (±15%)" not in readme_text
+
+    # Consistent diagnostic terms and heuristic envelope documentation
+    assert "NO_CLEAR_CHANGE_OBSERVED" in doc_text
+    assert "PERFORMANCE_CHANGE_OBSERVED" in doc_text
+    assert "heuristic variability envelope" in doc_text.lower()
+
+
+# 2. No universal ±15% threshold
+def test_regression_no_universal_15_percent_threshold():
+    # Scenario A: 8% drop (less than 15%), but baseline daily CV is 0.0 (envelope = 5.0%)
+    # Exceeds the 5% envelope -> PERFORMANCE_CHANGE_OBSERVED (would fail under universal 15%)
+    csv_data_8pct = build_synthetic_csv(
+        pre_days=14, rollout_days=14, pre_clicks=100, rollout_clicks=92, pre_imp=2000, rollout_imp=1840
+    )
+    triage_a = UpdateImpactTriage(csv_source=io.StringIO(csv_data_8pct))
+    res_a = triage_a.run()
+    assert res_a.click_change_percent == -8.0
+    assert res_a.diagnostic == DIAGNOSTIC_PERFORMANCE_CHANGE
+
+    # Scenario B: 12% drop, but high daily variance makes CV = 0.15 (envelope = 30.0%)
+    # Falls within 30% envelope -> NO_CLEAR_CHANGE_OBSERVED
+    lines = ["date,clicks,impressions"]
+    # Varying pre-window clicks to create high variance
+    pre_vals = [50, 150, 60, 140, 70, 130, 80, 120, 50, 150, 60, 140, 70, 130]  # mean 100
+    for idx, c in enumerate(pre_vals):
+        day = 10 + idx
+        lines.append(f"2026-09-{day:02d},{c},{c * 20}")
+    # Rollout clicks = constant 88 (12% drop from mean 100)
+    for idx in range(14):
+        if idx < 7:
+            day = 24 + idx
+            lines.append(f"2026-09-{day:02d},88,1760")
+        else:
+            day = idx - 6
+            lines.append(f"2026-10-{day:02d},88,1760")
+    triage_b = UpdateImpactTriage(csv_source=io.StringIO("\n".join(lines)))
+    res_b = triage_b.run()
+    assert res_b.click_change_percent == -12.0
+    assert res_b.diagnostic in (DIAGNOSTIC_NO_CHANGE, "NO_CLEAR_CHANGE_OBSERVED")
+
+
+# 3. No false statistical significance
+def test_regression_no_false_statistical_significance():
+    # Massive 70% decline
+    csv_data = build_synthetic_csv(
+        pre_days=14, rollout_days=14, pre_clicks=100, rollout_clicks=30, pre_imp=2000, rollout_imp=600
+    )
+    triage = UpdateImpactTriage(csv_source=io.StringIO(csv_data))
+    result = triage.run()
+
+    # Statistical significance must remain UNKNOWN (heuristic envelope is not a validated significance test)
+    assert result.metrics.change_significance == "UNKNOWN"
+    assert "informal heuristic" in result.metrics.change_significance_details.lower()
+    assert "statistical significance is unknown" in result.metrics.change_significance_details.lower()
+
+
+# 4. Fractional click count rejection
+def test_regression_fractional_click_count_rejection():
+    from siteprobe.updates.validator import parse_non_negative_int
+
+    # Direct unit test
+    with pytest.raises(ValueError, match="must be an integer, got fractional value"):
+        parse_non_negative_int("12.5", "clicks", 2)
+
+    with pytest.raises(ValueError, match="must be an integer, got fractional value"):
+        parse_non_negative_int("0.2", "clicks", 5)
+
+    # CSV integration test
+    csv_data = "date,clicks,impressions\n2026-09-10,12.5,200\n"
+    with pytest.raises(ValueError, match="must be an integer, got fractional value '12.5'"):
+        validate_and_parse_gsc_csv(csv_data)
+
+
+# 5. Fractional impression count rejection
+def test_regression_fractional_impression_count_rejection():
+    from siteprobe.updates.validator import parse_non_negative_int
+
+    # Direct unit test
+    with pytest.raises(ValueError, match="must be an integer, got fractional value"):
+        parse_non_negative_int("100.8", "impressions", 3)
+
+    # CSV integration test
+    csv_data = "date,clicks,impressions\n2026-09-10,12,200.7\n"
+    with pytest.raises(ValueError, match="must be an integer, got fractional value '200.7'"):
+        validate_and_parse_gsc_csv(csv_data)
+
+
+# 6. --json and --output flags work together
+def test_regression_json_and_output_flags_together(tmp_path):
+    import json
+    csv_content = build_synthetic_csv()
+    csv_file = tmp_path / "input.csv"
+    csv_file.write_text(csv_content, encoding="utf-8")
+    out_file = tmp_path / "combined_report.json"
+
+    res = runner.invoke(app, [
+        "update-triage",
+        "--csv", str(csv_file),
+        "--json",
+        "--output", str(out_file),
+    ])
+
+    assert res.exit_code == 0
+    # Stdout must be valid JSON parseable directly
+    stdout_json = json.loads(res.output)
+    assert stdout_json["event"]["name"] == "September 2026 Google Spam Update"
+
+    # Requested output file must exist and match stdout
+    assert out_file.exists()
+    file_json = json.loads(out_file.read_text(encoding="utf-8"))
+    assert file_json["event"]["name"] == "September 2026 Google Spam Update"
+    assert file_json["diagnostic"] == stdout_json["diagnostic"]
+
+
+# 7. Missing GSC API access clarity
+def test_regression_missing_gsc_api_access():
+    triage = UpdateImpactTriage(csv_source=None)
+    result = triage.run()
+
+    assert result.status == STATUS_DATA_UNAVAILABLE
+    assert result.diagnostic == DIAGNOSTIC_INSUFFICIENT_DATA
+    # Diagnostic reason must not claim automated API retrieval
+    assert "Search Console performance data is unavailable" in result.diagnostic_reason
+    assert "CSV export was provided" in result.diagnostic_reason
+
+
+# 8. Incomplete POST window handling
+def test_regression_incomplete_post_window():
+    csv_data = build_synthetic_csv(pre_days=14, rollout_days=14, include_completion=True, include_post=True)
+    triage = UpdateImpactTriage(csv_source=io.StringIO(csv_data))
+    result = triage.run()
+
+    assert result.post_metrics is not None
+    assert result.post_metrics.is_complete is False
+    assert result.post_metrics.status == "INCOMPLETE"
+    assert result.post_metrics.days_present == 1
+    assert result.post_metrics.days_expected == 14
+    assert any("Post-update recovery cannot be reliably evaluated" in w for w in result.validation_warnings)
+
+
+# 9. Synthetic data disclosure
+def test_regression_synthetic_data_disclosure(tmp_path):
+    csv_file = tmp_path / "synthetic_test.csv"
+    csv_content = (
+        "# SYNTHETIC DATASET FOR BENCHMARK TESTING\n"
+        + build_synthetic_csv()
+    )
+    csv_file.write_text(csv_content, encoding="utf-8")
+
+    triage = UpdateImpactTriage(csv_source=csv_file)
+    result = triage.run()
+
+    assert result.data_quality.data_type == "SYNTHETIC"
+    assert any("SYNTHETIC benchmark data" in w for w in result.data_quality.validation_warnings)
+
+
+# 10. Existing CLI backward compatibility
+def test_regression_cli_backward_compatibility():
+    # Help flag
+    res_help = runner.invoke(app, ["update-triage", "--help"])
+    assert res_help.exit_code == 0
+    assert "--csv" in res_help.output
+    assert "--audit-file" in res_help.output
+    assert "--manual-action" in res_help.output
+    assert "--output" in res_help.output
+    assert "--json" in res_help.output
 

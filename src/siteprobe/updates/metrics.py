@@ -136,35 +136,78 @@ def compute_baseline_variability(pre_window: WindowMetrics) -> Optional[Baseline
     )
 
 
+def compute_heuristic_envelope(variability: Optional[BaselineVariability]) -> Optional[float]:
+    """
+    Computes informal heuristic baseline variability envelope: max(5%, 2 * baseline daily CV).
+    Note: This is an informal heuristic envelope, NOT a validated 95% confidence interval
+    or statistical significance test.
+    """
+    if not variability or variability.daily_clicks_cv is None:
+        return None
+    return max(5.0, round(2.0 * variability.daily_clicks_cv * 100.0, 1))
+
+
+def check_exceeds_heuristic_envelope(
+    click_change_pct: Optional[float],
+    imp_change_pct: Optional[float],
+    variability: Optional[BaselineVariability],
+) -> Optional[bool]:
+    """
+    Checks whether an observed percentage change exceeds the heuristic variability envelope.
+    Returns True if either click or impression change exceeds the envelope,
+    False if within the envelope, or None if variability cannot be calculated.
+    """
+    if click_change_pct is None:
+        return None
+    envelope_pct = compute_heuristic_envelope(variability)
+    if envelope_pct is None:
+        return None
+    return abs(click_change_pct) >= envelope_pct or (
+        imp_change_pct is not None and abs(imp_change_pct) >= envelope_pct
+    )
+
+
 def evaluate_change_significance(
     click_change_pct: Optional[float],
     imp_change_pct: Optional[float],
     variability: Optional[BaselineVariability],
 ) -> Tuple[str, Optional[str]]:
     """
-    Evaluates whether an observed change exceeds the site's own baseline variability envelope.
+    Evaluates observed performance change against the site's heuristic baseline daily variability envelope.
     Does NOT use an arbitrary universal +/-15% threshold.
+    Statistical significance remains UNKNOWN as this envelope is an informal heuristic, not a validated test.
+    Avoids labeling differences as 'normal' or 'abnormal'.
     """
     if click_change_pct is None:
-        return "UNKNOWN", "No comparison change calculated."
+        return "UNKNOWN", "No comparison change calculated. Statistical significance: UNKNOWN."
 
-    if not variability or variability.daily_clicks_cv is None:
-        return "UNKNOWN", "Insufficient baseline daily variance to determine statistical envelope."
-
-    # Baseline envelope: at least 5% minimum floor or 2x coefficient of variation (95% spread)
-    envelope_pct = max(5.0, round(2.0 * variability.daily_clicks_cv * 100.0, 1))
-
-    if abs(click_change_pct) >= envelope_pct or (imp_change_pct and abs(imp_change_pct) >= envelope_pct):
+    envelope_pct = compute_heuristic_envelope(variability)
+    if envelope_pct is None:
         return (
-            "SIGNIFICANT_RELATIVE_TO_BASELINE",
-            f"Observed click change ({click_change_pct:+.1f}%) exceeds the site's own baseline "
-            f"daily variance envelope (±{envelope_pct:.1f}% based on 2x CV).",
+            "UNKNOWN",
+            "Insufficient baseline daily variance to determine heuristic variability envelope. "
+            "Statistical significance: UNKNOWN.",
+        )
+
+    exceeds = abs(click_change_pct) >= envelope_pct or (
+        imp_change_pct is not None and abs(imp_change_pct) >= envelope_pct
+    )
+
+    if exceeds:
+        return (
+            "UNKNOWN",
+            f"Observed click change ({click_change_pct:+.1f}%) exceeds the site's heuristic "
+            f"baseline daily variability envelope (±{envelope_pct:.1f}% based on 2x CV). "
+            f"This envelope is an informal heuristic, not a formal statistical significance test; "
+            f"statistical significance is UNKNOWN.",
         )
     else:
         return (
-            "WITHIN_BASELINE_VARIABILITY",
-            f"Observed click change ({click_change_pct:+.1f}%) falls within the site's own "
-            f"normal pre-update daily variance envelope (±{envelope_pct:.1f}%).",
+            "UNKNOWN",
+            f"Observed click change ({click_change_pct:+.1f}%) falls within the site's heuristic "
+            f"baseline daily variability envelope (±{envelope_pct:.1f}% based on 2x CV). "
+            f"This envelope is an informal heuristic, not a formal statistical significance test; "
+            f"statistical significance is UNKNOWN.",
         )
 
 

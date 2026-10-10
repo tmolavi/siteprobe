@@ -52,7 +52,7 @@ SiteProbe establishes **four frozen windows**:
 
 ## 2. Data Requirements & Validation
 
-SiteProbe accepts an optional Google Search Console CSV export or connects to the Search Console API when configured.
+SiteProbe requires a Google Search Console performance CSV export (`--csv`). Automated GSC API retrieval for frozen comparison windows is not currently supported; input data must be supplied via CSV export.
 
 ### Required CSV Columns
 - `date`: Chronological date in `YYYY-MM-DD` format.
@@ -68,24 +68,39 @@ SiteProbe accepts an optional Google Search Console CSV export or connects to th
 - `ctr`: Click-through rate (`0.0 <= ctr <= 1.0` or `0%` to `100%`).
 
 ### Integrity & Validation Rules
-1. **Zero Fake Data**: SiteProbe never generates simulated or synthetic Search Console rows when live data is missing. If neither credentials nor a user-provided CSV is supplied, it returns `status="DATA_UNAVAILABLE"`.
+1. **Zero Fake Data**: SiteProbe never generates simulated or synthetic Search Console rows when live data is missing. If no user-provided CSV is supplied, it returns `status="DATA_UNAVAILABLE"`.
 2. **Duplicate Detection**: Duplicate rows across dimension composite keys are flagged as validation errors.
 3. **Mathematical Consistency**: Clicks cannot exceed impressions. Rows where `clicks > impressions` or `impressions == 0 and clicks > 0` fail validation.
 4. **Aggregate CTR Calculation**: SiteProbe calculates CTR as:
    $$\text{CTR}_{\text{window}} = \frac{\sum \text{Clicks}}{\sum \text{Impressions}}$$
    SiteProbe **never averages individual daily CTR percentages**, which would introduce significant weighting errors.
 5. **Position Shifts & Query Composition**: Average position cannot be evaluated in isolation. A loss of low-ranking long-tail impressions can paradoxically *improve* average position, while acquiring high impressions on positions 8–10 can *depress* average position without any ranking loss.
+6. **Strict Non-Negative Integer Counts**: Clicks and impressions must be non-negative integers. Fractional values (e.g. `12.5`) are strictly rejected rather than rounded.
 
 ---
 
-## 3. Diagnostic Classifications
+## 3. Diagnostic Classifications & Statistical Methodology
 
-SiteProbe outputs one of five empirical observations:
+SiteProbe evaluates performance shifts by comparing the 14-day pre-update baseline against the 14-day rollout window. Crucially, SiteProbe **does NOT use an arbitrary universal ±15% threshold** to define what is "normal" or "abnormal". Instead, it computes the site's own baseline daily coefficient of variation (CV) during the unperturbed PRE window:
+
+$$\text{CV} = \frac{\sigma_{\text{daily}}}{\mu_{\text{daily}}}$$
+
+From this, an informal heuristic variability envelope is established:
+
+$$\text{Envelope}_{\text{heuristic}} = \max(5\%, 2 \times \text{CV})$$
+
+### Statistical Integrity Principles
+1. **Heuristic Envelope, Not a Formal Significance Test**: The envelope $\max(5\%, 2 \times \text{CV})$ serves strictly as an informal heuristic for descriptive context. It is **NOT** a validated 95% confidence interval or formal hypothesis test across autocorrelated daily time series.
+2. **Statistical Significance is Explicitly UNKNOWN**: Because no formal multi-period hypothesis test is conducted, statistical significance is explicitly recorded as `UNKNOWN`.
+3. **No 'Normal' or 'Abnormal' Labels**: Differences are not categorized as intrinsically "normal" or "abnormal" solely because they cross a heuristic threshold. Descriptive percentage deltas and baseline variability are reported transparently as context.
+4. **Separation of Concepts**: Observed traffic changes are kept strictly separate from technical issues, manual actions, statistical significance, update correlation, and causality.
+
+SiteProbe outputs one of five empirical diagnostic observations:
 
 | Diagnostic | Trigger Criteria |
 | :--- | :--- |
-| `NO_MEANINGFUL_CHANGE_OBSERVED` | Comparison windows complete; performance shift within normal variance (±15%); no blocking technical or manual issues. |
-| `PERFORMANCE_CHANGE_OBSERVED` | Significant decline or gain (≥15% clicks or impressions) during rollout window; no manual action and no blocking technical errors found. Represents potential update correlation. |
+| `NO_CLEAR_CHANGE_OBSERVED` | Comparison windows complete; performance change remains within the site's heuristic baseline daily variability envelope; no blocking technical or manual issues. |
+| `PERFORMANCE_CHANGE_OBSERVED` | Measurable performance change observed during rollout exceeding the site's heuristic baseline variability envelope (or non-zero change when baseline CV is unavailable); no manual action and no blocking technical errors found. Represents potential update correlation; causality is not claimed. |
 | `TECHNICAL_ISSUE_OBSERVED` | Deterministic site errors identified (HTTP 5xx/4xx, sitewide noindex, robots.txt crawl blocks, canonical conflicts, redirect loops, empty SPA client shells). |
 | `MANUAL_ACTION_REPORTED` | Google Search Console explicitly confirms a manual penalty issued by human webspam reviewers. Never inferred from traffic changes. |
 | `INSUFFICIENT_DATA` | Search Console data missing, PRE or ROLLOUT windows missing dates (<14 days), or zero total impressions recorded. |
