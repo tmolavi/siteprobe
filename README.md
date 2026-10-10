@@ -5,6 +5,7 @@
 **Open-source autonomous website auditor & fixer for SEO, GEO, performance, accessibility and technical web quality.**
 
 [![CI](https://github.com/tmolavi/siteprobe/actions/workflows/ci.yml/badge.svg)](https://github.com/tmolavi/siteprobe/actions)
+[![Version: 0.2.0](https://img.shields.io/badge/version-0.2.0-blue.svg)](https://github.com/tmolavi/siteprobe/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python: 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
 [![MCP Server](https://img.shields.io/badge/MCP-Ready-green.svg)](https://modelcontextprotocol.io)
@@ -15,11 +16,11 @@
 </p>
 
 [Quick Start](#-60-second-quick-start) &bull;
+[Google Update Triage](#-google-update-impact-triage-v020) &bull;
 [Workflow](#-audit--fix--verify-workflow) &bull;
-[Agent Skill](#-agent-skill-installation--exact-instructions) &bull;
+[AI Assistants & Skill](#-ai-assistant--agent-skill-quickstart-codex-antigravity-claude-cursor) &bull;
 [MCP Server](#-model-context-protocol-mcp) &bull;
-[Honesty & Status Table](#-feature-status--honesty-table) &bull;
-[Architecture](#-architecture)
+[Honesty & Status Table](#-feature-status--honesty-table)
 
 </div>
 
@@ -36,6 +37,9 @@ siteprobe fix ./siteprobe-report/audit.json --repo /path/to/project
 
 # 3. Verify that changes resolved the issues without regressions
 siteprobe verify ./siteprobe-report/audit.json --repo /path/to/project
+
+# 4. Triage Search Console performance around Google algorithm updates
+siteprobe update-triage --csv examples/update-impact/sample-input.csv
 ```
 
 ---
@@ -258,18 +262,46 @@ siteprobe fix ./my-audit/audit.json --repo /path/to/my-project
 siteprobe verify ./my-audit/audit.json --repo /path/to/my-project
 ```
 
-### Google Update Impact Triage
-SiteProbe provides a reproducible workflow for examining Search Console performance changes around Google's algorithm updates (e.g., September 2026 Google Spam Update). It distinguishes observed performance shifts, technical website errors, manual actions, and possible update correlations without over-claiming.
+---
 
+## 🔍 Google Update Impact Triage (v0.2.0)
+
+SiteProbe provides an evidence-based, reproducible workflow for examining Google Search Console performance changes around official algorithm updates (e.g. the **September 2026 Google Spam Update**, rolled out 2026-09-24 through 2026-10-08).
+
+### 🎯 Objective: Distinguishing 5 Diagnostic States
+Rather than guessing or blaming Google updates arbitrarily, SiteProbe strictly classifies observations into one of 5 defensible states:
+1. `NO_CLEAR_CHANGE_OBSERVED`: Observed fluctuations remain within the site's own daily baseline variance envelope ($2 \times \text{CV}$).
+2. `PERFORMANCE_CHANGE_OBSERVED`: Statistically meaningful traffic decline occurred during update rollout with no manual actions or blocking technical errors.
+3. `TECHNICAL_ISSUE_OBSERVED`: Severe technical defects (HTTP 5xx, noindex, broken canonicals, or robots.txt blocks) explain ranking or traffic drop independently.
+4. `MANUAL_ACTION_REPORTED`: Explicit Search Console manual action notice confirmed (never inferred from traffic decline).
+5. `INSUFFICIENT_DATA` / `DATA_UNAVAILABLE`: Incomplete comparison windows or missing Search Console export.
+
+### 📅 Frozen Comparison Windows (September 2026 Spam Update)
+* **PRE Window**: `2026-09-10` to `2026-09-23` (14 days, matched weekdays)
+* **ROLLOUT Window**: `2026-09-24` to `2026-10-07` (14 days, matched weekdays)
+* **COMPLETION Day**: `2026-10-08` (1 day recorded separately)
+* **POST Window**: `2026-10-09` to `2026-10-22` (marked `INCOMPLETE`; no future data extrapolated)
+
+### 💻 Triage CLI Commands
 ```bash
-# Triage Search Console export against frozen rollout windows
-siteprobe update-triage --csv examples/update-impact/sample-input.csv
+# Run triage on a Search Console performance export
+siteprobe update-triage --csv ./gsc_performance.csv
 
-# Output machine-readable JSON triage report
-siteprobe update-triage --csv examples/update-impact/sample-input.csv --output report.json
+# Run triage with simultaneous technical site audit
+siteprobe update-triage --csv ./gsc_performance.csv --url https://example.com
+
+# Export machine-readable JSON triage report
+siteprobe update-triage --csv ./gsc_performance.csv --output ./triage-report.json
+
+# Test with synthetic benchmark dataset
+siteprobe update-triage --csv examples/update-impact/sample-input.csv --output examples/update-impact/sample-output.json
 ```
-- [Methodology & Research Guide](docs/research/google-spam-update-september-2026.md)
-- [Reproduction Example & Synthetic Benchmark](examples/update-impact/README.md)
+
+* 📖 **Research & Methodology**: [`docs/research/google-spam-update-september-2026.md`](docs/research/google-spam-update-september-2026.md)
+* 🧪 **Synthetic Reproduction Benchmark**: [`examples/update-impact/README.md`](examples/update-impact/README.md)
+* 🛡️ **Scientific Disclaimer**: Correlation does not prove causation. SiteProbe does not detect internal SpamBrain algorithms, and never labels any website as spam.
+
+---
 
 ### System Diagnostics
 ```bash
