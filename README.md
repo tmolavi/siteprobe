@@ -282,13 +282,25 @@ siteprobe integrations
 
 ---
 
-## 🤖 Agent Skill Installation & Exact Instructions
+## 🤖 AI Assistant & Agent Skill Quickstart (Codex, Antigravity, Claude, Cursor)
 
-SiteProbe provides a canonical Agent Skill at:
-[`skills/siteprobe/SKILL.md`](https://github.com/tmolavi/siteprobe/blob/main/skills/siteprobe/SKILL.md)
+SiteProbe includes first-class rules and intake guidelines for all major AI coding environments:
+* **Canonical Skill**: [`skills/siteprobe/SKILL.md`](https://github.com/tmolavi/siteprobe/blob/main/skills/siteprobe/SKILL.md)
+* **Agent Guidelines**: [`AGENTS.md`](https://github.com/tmolavi/siteprobe/blob/main/AGENTS.md) (Codex, Antigravity, Windsurf)
+* **Claude Guidelines**: [`CLAUDE.md`](https://github.com/tmolavi/siteprobe/blob/main/CLAUDE.md) (Claude Code, Claude Desktop)
+* **Cursor Rules**: [`.cursorrules`](https://github.com/tmolavi/siteprobe/blob/main/.cursorrules) and [`.cursor/rules/siteprobe.mdc`](https://github.com/tmolavi/siteprobe/blob/main/.cursor/rules/siteprobe.mdc)
+
+### 📋 What AI Agents Ask For On First Use
+Before running any analysis, AI assistants are instructed to check prerequisites and ask for required inputs:
+1. **Environment Check**: Run `siteprobe doctor` to verify CLI and active tools.
+2. **Website Audit (`siteprobe audit`)**: Requires **Target URL** (e.g. `https://example.com`) and optional report language (`en`, `fa`, `tr`).
+3. **Google Update Triage (`siteprobe update-triage`)**: Requires **Search Console performance CSV** (`date,clicks,impressions`) and manual action status.
+4. **Automated Fixes (`siteprobe fix`)**: Requires **local source code repository path** (`--repo <path>`) and `audit.json`.
+
+---
 
 ### 1. Claude Code
-To equip Claude Code with SiteProbe, point to the skill folder or copy it into your local skill directory:
+Point Claude Code to the skill or copy it into your local skills directory:
 ```bash
 # Copy to local skills directory
 mkdir -p ~/.claude/skills
@@ -300,28 +312,25 @@ claude "Read skills/siteprobe/SKILL.md and audit https://example.com, then fix s
 ```
 
 ### 2. OpenAI Codex / CLI Agents
-Codex reads repository guidelines from `AGENTS.md` in the project root:
+Codex automatically reads repository guidelines from `AGENTS.md`:
 ```bash
 codex "Audit https://example.com using the siteprobe CLI and verify all changes."
 ```
 
 ### 3. Google Gemini / Antigravity
-In Antigravity or Gemini CLI, link the skill location in your configuration:
-```json
-{
-  "skills": [
-    "/path/to/siteprobe/skills/siteprobe/SKILL.md"
-  ]
-}
+In Antigravity or Gemini CLI, reference `skills/siteprobe/SKILL.md` or copy it to `~/.gemini/config/skills/siteprobe/`:
+```bash
+cp -r skills/siteprobe ~/.gemini/config/skills/
 ```
 **Tested Invocation**:
 > "Audit this website and fix all safe issues you can verify following the siteprobe skill workflow."
 
-### 4. Cursor
-In Cursor, reference the skill file in `.cursorrules` or mention the file directly in the chat prompt:
+### 4. Cursor IDE
+Cursor automatically picks up `.cursorrules` and `.cursor/rules/siteprobe.mdc` in the repository root. You can also mention the skill directly:
 ```text
 @skills/siteprobe/SKILL.md Audit https://example.com and apply verified fixes.
 ```
+
 
 ---
 

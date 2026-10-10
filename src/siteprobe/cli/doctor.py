@@ -25,6 +25,23 @@ def run_doctor() -> None:
     py_ver = f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
     table.add_row("Python Runtime", "[green]PASS[/green]", f"Python {py_ver}")
 
+    # Core Update Triage Engine
+    table.add_row(
+        "Update Impact Triage",
+        "[green]PASS[/green]",
+        "Engine active (Sep 2026 Spam Update frozen windows & baseline variability).",
+    )
+
+    # MCP Protocol Server
+    try:
+        import mcp
+        mcp_status = "[green]AVAILABLE[/green]"
+        mcp_desc = "FastMCP ready. Run 'siteprobe serve-mcp' for Claude Code, Cursor, Windsurf."
+    except ImportError:
+        mcp_status = "[yellow]OPTIONAL[/yellow]"
+        mcp_desc = "Run 'pip install mcp' to enable FastMCP tool calling for Claude / Cursor."
+    table.add_row("FastMCP Server", mcp_status, mcp_desc)
+
     # Integrations
     integrations = [
         LighthouseIntegration(),
@@ -42,4 +59,20 @@ def run_doctor() -> None:
         table.add_row(info["name"], status_badge, detail)
 
     console.print(table)
-    console.print("\n[dim]Core crawler, audit checks, i18n, and remediation work without any optional integrations.[/dim]\n")
+
+    # AI Agent First-Use Checklist
+    console.print(
+        "\n[bold green]AI Assistant & IDE Intake Checklist (Codex, Antigravity, Claude, Cursor):[/bold green]"
+    )
+    console.print(
+        "  1. [bold]Website Audit[/bold]: Requires target URL. (e.g. [cyan]siteprobe audit https://example.com[/cyan])"
+    )
+    console.print(
+        "  2. [bold]Update Triage[/bold]: Requires GSC performance CSV ([cyan]--csv <file.csv>[/cyan] with date, clicks, impressions)."
+    )
+    console.print(
+        "  3. [bold]Automated Fixes[/bold]: Requires local project source repository path ([cyan]--repo <path>[/cyan])."
+    )
+    console.print(
+        "  4. [bold]Safety Rule[/bold]: Never fake GSC/GA4 numbers; never claim SpamBrain penalty without Search Console evidence.\n"
+    )

@@ -69,9 +69,14 @@ flowchart LR
 
 ---
 
-### Phase A: Intake & Target Scoping
-1. Determine the target website URL, requested language (e.g. `en`, `fa`, `tr`), and whether source code repository access is available.
-2. If the user provided a URL, proceed directly to public audit without asking clarifying questions unless the target is ambiguous.
+### Phase A: Prerequisites & First-Use Intake
+1. **Verify Environment**: Check if `siteprobe` is installed (`siteprobe --version`). If missing, instruct user to install or run `pip install -e .`. Run `siteprobe doctor` to check active capabilities.
+2. **Determine Target Task & Obtain Required Inputs**:
+   - **For Website Audit (`siteprobe audit`)**: Target website URL (mandatory), language (`en`/`fa`/`tr`), and whether source code repository access is available for auto-fixes.
+   - **For Update Triage (`siteprobe update-triage`)**: Google Search Console CSV performance export (with `date`, `clicks`, `impressions`). If unavailable, offer synthetic benchmark (`examples/update-impact/sample-input.csv`) or inform that analysis requires GSC data. Ask if GSC reports a manual action.
+   - **For SSR Inspection (`siteprobe check-ssr`)**: Target URL.
+   - **For Automated Remediation (`siteprobe fix` / `siteprobe verify`)**: Local project source repository path (`--repo <path>`) and `audit.json`.
+3. If the user provided the necessary input, proceed directly to execution without unnecessary delay.
 
 ---
 

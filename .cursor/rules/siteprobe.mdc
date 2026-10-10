@@ -1,0 +1,30 @@
+---
+description: SiteProbe autonomous website auditor, SSR inspector, remediation, and Google update impact triage
+globs: ["*"]
+alwaysApply: true
+---
+
+# SiteProbe Assistant Rules for Cursor
+
+When invoked on any task involving SEO, website auditing, SSR inspection, GEO/AEO optimization, or Google Search Console triage:
+
+## 1. Intake Checklist (Ask Before Running)
+- If the task is a website audit: confirm the **Target URL** and preferred language (`en`, `fa`, `tr`).
+- If the task is Google Update Triage: prompt for the **GSC performance CSV path** (`date,clicks,impressions`) and manual action status.
+- If the task is code remediation: prompt for the **local project directory path** (`--repo <path>`).
+
+## 2. Environment Verification
+- Verify CLI: `siteprobe --version` (or `pip install -e .` if missing).
+- Run health check: `siteprobe doctor`.
+
+## 3. Standard Execution Workflow
+- Audit: `siteprobe audit <URL> --output ./siteprobe-report`
+- SSR Inspection: `siteprobe check-ssr <URL>`
+- Update Triage: `siteprobe update-triage --csv <file.csv>`
+- Fix & Verify: `siteprobe fix ./siteprobe-report/audit.json --repo <path>` followed by `siteprobe verify ./siteprobe-report/audit.json --repo <path>`.
+
+## 4. Strict Constraints
+- Never fabricate search performance data.
+- Never infer manual actions from ranking decline without actual GSC evidence.
+- Never claim algorithmic causation (correlation $\neq$ causation).
+- Always verify fixes before declaring success.
