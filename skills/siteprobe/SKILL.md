@@ -198,7 +198,18 @@ SiteProbe assigns one of five evidence-backed observations:
 
 ---
 
-### Phase H: Final Summary
+### Phase H: AI Agent Autonomous Infrastructure Tools (MCP)
+
+SiteProbe provides native FastMCP tools that AI agents (Cursor, Claude Code, Codex, Hermes, Antigravity) can call autonomously without human toil or paid API keys:
+
+* **`audit_competitor_gap(target_domain, competitor_domain)`**: Instantly extracts commercial, transactional, and informational keyword gaps against a competitor.
+* **`get_backlink_intelligence(domain)`**: Estimates referring domain tiers, citation authority balance, and dofollow ratios.
+* **`get_ai_search_visibility(domain, brand_name)`**: Audits brand citation defense across ChatGPT Search, Perplexity, and Google AI Mode.
+* **`generate_agent_remediation_tasks(job_id)`**: Transforms all audit findings into prompt-ready structured task recipes with exact line targets and file-by-file repair actions for coding agents.
+
+---
+
+### Phase I: Final Summary
 Conclude with a clear summary:
 * Fixed issues with code diffs.
 * Verification status with before/after evidence.

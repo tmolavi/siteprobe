@@ -41,11 +41,15 @@ class CustomMockHandler(http.server.SimpleHTTPRequestHandler):
         pass
 
 
+class ReusableTCPServer(socketserver.TCPServer):
+    allow_reuse_address = True
+
+
 @pytest.fixture(scope="session")
 def mock_server():
     port = 8899
     handler = CustomMockHandler
-    with socketserver.TCPServer(("127.0.0.1", port), handler) as httpd:
+    with ReusableTCPServer(("127.0.0.1", port), handler) as httpd:
         thread = threading.Thread(target=httpd.serve_forever, daemon=True)
         thread.start()
         yield f"http://127.0.0.1:{port}"

@@ -14,6 +14,7 @@ except (ImportError, ModuleNotFoundError):
 from siteprobe.checks.technical.ssr import analyze_ssr
 from siteprobe.core.config import SiteProbeConfig
 from siteprobe.core.engine import AuditEngine, AuditResult
+from siteprobe.integrations.dataforseo import DataForSEOIntegration
 from siteprobe.models.config import CrawlConfig, SiteConfig
 from siteprobe.models.finding import FindingCategory, Severity
 from siteprobe.remediation.executor import RemediationExecutor
@@ -230,6 +231,49 @@ def generate_report(job_id: str, format: str = "markdown") -> str:
     elif fmt == "html":
         return HtmlReporter.render(res)
     return MarkdownReporter.render(res)
+
+
+@mcp.tool()
+async def audit_competitor_gap(target_domain: str, competitor_domain: str) -> Dict[str, Any]:
+    """Analyze high-intent keyword gaps, commercial search intent, and opportunity areas against a competitor."""
+    integration = DataForSEOIntegration()
+    return await integration.get_keyword_gap(target_domain, competitor_domain)
+
+
+@mcp.tool()
+async def get_backlink_intelligence(domain: str) -> Dict[str, Any]:
+    """Retrieve backlink profile signals, referring domain tiers, and authority balance for a domain."""
+    integration = DataForSEOIntegration()
+    return await integration.get_backlink_profile(domain)
+
+
+@mcp.tool()
+async def get_ai_search_visibility(domain: str, brand_name: Optional[str] = None) -> Dict[str, Any]:
+    """Evaluate multi-engine AI search visibility across ChatGPT, Perplexity, and Google AI Overview."""
+    integration = DataForSEOIntegration()
+    return await integration.get_ai_search_visibility(domain, brand_name)
+
+
+@mcp.tool()
+def generate_agent_remediation_tasks(job_id: str) -> List[Dict[str, Any]]:
+    """Format audit findings into prompt-ready structured tasks for autonomous coding agents (Claude, Cursor, Codex, Hermes)."""
+    job = _JOBS.get(job_id)
+    if not job or not job.get("result"):
+        return [{"error": "Audit result not ready"}]
+    res: AuditResult = job["result"]
+    tasks = []
+    for idx, f in enumerate(res.findings, 1):
+        tasks.append({
+            "task_id": f"TASK-{idx:03d}",
+            "finding_id": f.id,
+            "title": f.title,
+            "category": f.category.value,
+            "severity": f.severity.value,
+            "affected_url": f.url,
+            "agent_instruction": f"Fix issue: {f.title}. Why it matters: {f.why_it_matters}. Action: {f.recommended_action}",
+            "safe_autofix_eligible": f.auto_fixable,
+        })
+    return tasks
 
 
 def run_mcp():
